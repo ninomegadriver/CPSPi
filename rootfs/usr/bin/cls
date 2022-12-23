@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo dd if=/dev/zero count=336 bs=1024 of=/dev/fb0 2>/dev/null >/dev/null

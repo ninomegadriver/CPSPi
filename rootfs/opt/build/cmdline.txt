@@ -1,0 +1,1 @@
+console=tty2 root=PARTUUID=62630287-02 rootfstype=ext4 fsck.repair=yes rootwait vt.global_cursor_default=0 quiet loglevel=0 consoleblank=0

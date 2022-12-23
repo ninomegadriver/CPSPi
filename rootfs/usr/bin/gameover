@@ -1,0 +1,38 @@
+#!/bin/perl
+
+$total = `ls -ahl /banners/gameover/*.mp4 | wc -l`;
+$total =~ s/\n//ig;
+$total =~ s/\r//ig;
+$total += 0;
+$last = 0;
+
+if(open(F, "/banners/gameover/last.txt")){
+	$last = <F>;
+	$last =~ s/\r//ig;
+	$last =~ s/\n//ig;
+	$last += 0;
+}
+
+TRY:
+$next = $last + 1;
+if($next > $total){
+	$next = 1;
+}
+
+if(-f "/banners/gameover/" . zerofill($next,2) . ".mp4"){}else{
+	goto TRY;
+}
+
+
+system("/usr/bin/mplayer -vo fbdev2 -fs -zoom -x 384 -y 224 /banners/gameover/" . zerofill($next,2) . ".mp4 2>/dev/null >/dev/null");
+system("echo $next >/banners/gameover/last.txt");
+
+
+sub zerofill {
+    my($temp) = shift;
+    my($len)  = shift;
+    my($diff) = $len - length($temp);
+
+    return($temp) if $diff <= 0;
+    return(('0' x $diff) . $temp);
+}

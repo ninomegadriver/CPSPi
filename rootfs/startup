@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Enable the Audio Jack output
+sudo /usr/bin/amixer set "Headphone" on
+
+# Uncomment this if you want a fixed volume at startup
+# sudo /usr/bin/amixer sset "Headphone" "95%" 2>/dev/null >/dev/null
+
+# Check if we're ready to go...
+if test -f "/.advance/advmenu.rc"; then
+   # Step into ROM folder...
+   cd /.advance/rom 2>/dev/null >/dev/null
+   # Clear Screen
+   sudo /usr/bin/cls
+   # Display Capcom logo...
+   sudo /usr/bin/logo
+   # Start the menu
+   sudo /usr/bin/advmenu --quiet 2>/dev/null >/dev/null
+fi
+
+# Clear the screen once again...
+sudo /usr/bin/cls
+
+# Display goodby screen...
+sudo /usr/bin/gameover
+
+# Store the audio settings for the next run...
+sudo /usr/sbin/alsactl/alsactl store
+
+# Poweroff the system...
+/sbin/poweroff 2>/dev/null >/dev/null
+
