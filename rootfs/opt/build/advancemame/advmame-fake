@@ -1,0 +1,18 @@
+#!/bin/bash
+
+/usr/bin/cls
+
+echo $@ >/.advance/last_cmdline.log
+
+if grep -q -i -e 'xml' -e 'listbare' <<< "$@"; then
+	/usr/bin/killall -9 bannerd aplay 2>/dev/null >/dev/null
+	/usr/bin/advmame-real $@
+else
+	/usr/bin/logo
+	if grep -q -i "msh " <<< "$@"; then
+		/usr/bin/advmame-real msha -quiet
+	else
+		/usr/bin/advmame-real $@ 2>&1 >/mame/advmame.out
+	fi
+fi
+

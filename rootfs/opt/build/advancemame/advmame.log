@@ -1,0 +1,1153 @@
+emu: AdvanceMAME 3.9-50-g384e646 Sep 24 2022 15:14:22
+emu:language: select game opwolf
+emu: use configuration section 'opwolf'
+emu: use configuration section '320x240x60'
+emu: use configuration section '320x240'
+emu: use configuration section 'horizontal'
+emu: use configuration section 'lightgun'
+emu: use configuration section '1player'
+emu: use configuration section ''
+emu: *_load()
+emu:video: orientation game 0000
+emu:video: orientation user 0000
+emu:video: orientation blit 0000
+emu:video: orientation ui   0000
+advance:msg: Missing options 'device_video_clock'
+advance:msg: Missing 'device_video_format' specification
+emu:video: default format vga resolution
+advance:fileio: dir_rom /home/nino/src/advancemame/:/home/nino/.advance/rom:/mnt/700G/Games/rpi/cpspi/rom
+advance:fileio: dir_image /home/nino/src/advancemame/:/home/nino/.advance/image:/mnt/700G/Games/rpi/cpspi/rom
+advance:fileio: dir_diff /home/nino/.advance/diff
+advance:fileio: dir_sample /home/nino/.advance/sample:/usr/local/share/advance/sample
+advance:fileio: dir_artwork /home/nino/.advance/artwork:/usr/local/share/advance/artwork
+advance:fileio: dir_nvram /home/nino/.advance/nvram
+advance:fileio: dir_hi /home/nino/.advance/hi
+advance:fileio: dir_inp /home/nino/.advance/inp
+advance:fileio: dir_sta /home/nino/.advance/sta:/mnt/pi/manem/snap
+advance:fileio: creating dir /mnt/pi/manem/snap
+advance:fileio: unable to create dir /mnt/pi/manem/snap
+advance:fileio: dir_memcard /home/nino/.advance/memcard
+advance:fileio: dir_snap /home/nino/.advance/snap:/mnt/pi/mame/snap
+advance:fileio: creating dir /mnt/pi/mame/snap
+advance:fileio: unable to create dir /mnt/pi/mame/snap
+emu: os_inner_init()
+os: os_inner_init
+os: sys Linux
+os: release 4.4.0-148-generic
+os: version #174~14.04.1-Ubuntu SMP Thu May 9 08:17:37 UTC 2019
+os: machine x86_64
+os: sysconf(_SC_CLK_TCK) 100
+os: sysconf(_SC_NPROCESSORS_CONF) 8
+os: sysconf(_SC_NPROCESSORS_ONLN) 8
+os: sysconf(_SC_PHYS_PAGES) 4099178
+os: sysconf(_SC_AVPHYS_PAGES) 607708
+os: sysconf(_SC_CHAR_BIT) 8
+os: sysconf(_SC_LONG_BIT) 64
+os: sysconf(_SC_WORD_BIT) 32
+os: compiler GNU 8.3.0
+os: compiled little endian system
+os: thread_id is equal at process_id. Probably NPTL threading.
+os: DISPLAY=:0.0
+advance: measured time 0.001067 (1/937.207)
+advance: measured time 0.001118 (1/894.454)
+advance: measured time 0.001119 (1/893.655)
+advance: measured time 0.001119 (1/893.655)
+advance: measured time 0.001119 (1/893.655)
+advance: measured time 0.00112 (1/892.857)
+advance: measured time 0.00112 (1/892.857)
+advance: median time 0.001119 (1/893.655) (err 0%)
+os: sleep granularity 0.001119
+os: clock granularity 1e-06
+os: SDL_Init(SDL_INIT_NOPARACHUTE)
+os: compiled with sdl 1.2.15
+os: linked with sdl 1.2.15
+emu: *_inner_init()
+video: adv_video_init
+video:sdl: sdl_init(id:-1,output:1,overlay_size:0)
+video:sdl: call SDL_InitSubSystem(SDL_INIT_VIDEO)
+video:sdl: SDL driver x11
+video:sdl: video hw_available:0
+video:sdl: video wm_available:1
+video:sdl: video blit_hw:0
+video:sdl: video blit_hw_CC:0
+video:sdl: video blit_hw_A:0
+video:sdl: video blit_sw:0
+video:sdl: video blit_sw_CC:0
+video:sdl: video blit_sw_A:0
+video:sdl: video blit_fill:0
+video:sdl: video video_mem:0 kBytes
+video:sdl: video bit:32 byte:4 rgb:8/16:8/8:8/0
+video:sdl: video current_w:1920
+video:sdl: video current_h:1080
+video:sdl: SDL_ListModes(0, sdl_mode_flags())
+video:sdl: all resolutions
+video:sdl: use window output
+video:sdl: current 1680x945
+video: select driver sdl
+emu:video: suggested debugger size 640x480
+josytickb:raw: joystickb_raw_init(id:-1)
+joystickb:raw: opening joystick from 0 to 4
+joystickb:raw: error opening device /dev/js0, errno 2 (No such file or directory)
+joystickb:raw: error opening device /dev/input/js0, errno 2 (No such file or directory)
+joystickb:raw: error opening device /dev/js1, errno 2 (No such file or directory)
+joystickb:raw: error opening device /dev/input/js1, errno 2 (No such file or directory)
+joystickb:raw: error opening device /dev/js2, errno 2 (No such file or directory)
+joystickb:raw: error opening device /dev/input/js2, errno 2 (No such file or directory)
+joystickb:raw: error opening device /dev/js3, errno 2 (No such file or directory)
+joystickb:raw: error opening device /dev/input/js3, errno 2 (No such file or directory)
+advance:msg:raw: No joystick found.
+josytickb:sdl: joystickb_sdl_init(id:-1)
+advance:msg:sdl: No joystick found.
+joystickb:none: joystickb_none_init(id:-1)
+joystickb: select driver none
+mouseb:sdl: mouseb_sdl_init(id:-1)
+mouseb: select driver sdl
+mouseb: identifier 0 '<id_not_available>'
+keyb:sdl: keyb_sdl_init(id:-1, disable_special:0)
+keyb: select driver sdl
+keyb: identifier 0 '<id_not_available>'
+emu:input: input code vector 7168
+emu:input: input devices
+Driver sdl, keyboards 1
+keyboard 0 '<id_not_available>'
+	keys a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 0_pad 1_pad 2_pad 3_pad 4_pad 5_pad 6_pad 7_pad 8_pad 9_pad f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 esc backquote minus equals backspace tab openbrace closebrace enter semicolon quote backslash less comma period slash space insert del home end pgup pgdn left right up down slash_pad asterisk_pad minus_pad plus_pad period_pad enter_pad prtscr pause lshift rshift lcontrol rcontrol lalt ralt lwin rwin menu scrlock numlock capslock
+Driver sdl, mouses 1
+mouse 0 '<id_not_available>', axes 2, buttons 3
+	axe 0 [x]
+	axe 1 [y]
+	button 0 [left]
+	button 1 [right]
+	button 2 [middle]
+Driver none, joysticks 0
+emu:input: input analog mapping player:0 control:paddlex : mouse[0,0]
+emu:input: input analog mapping player:0 control:paddley : mouse[0,1]
+emu:input: input analog mapping player:0 control:stickx : mouse[0,0]
+emu:input: input analog mapping player:0 control:sticky : mouse[0,1]
+emu:input: input analog mapping player:0 control:stickz : <none>
+emu:input: input analog mapping player:0 control:lightgunx : mouse[0,0]
+emu:input: input analog mapping player:0 control:lightguny : mouse[0,1]
+emu:input: input analog mapping player:0 control:pedalgas : <none>
+emu:input: input analog mapping player:0 control:pedalbrake : <none>
+emu:input: input analog mapping player:0 control:pedalother : <none>
+emu:input: input analog mapping player:0 control:dialx : mouse[0,0]
+emu:input: input analog mapping player:0 control:dialy : mouse[0,1]
+emu:input: input analog mapping player:0 control:trackballx : mouse[0,0]
+emu:input: input analog mapping player:0 control:trackbally : mouse[0,1]
+emu:input: input analog mapping player:0 control:mousex : mouse[0,0]
+emu:input: input analog mapping player:0 control:mousey : mouse[0,1]
+emu:input: input analog mapping player:1 control:paddlex : <none>
+emu:input: input analog mapping player:1 control:paddley : <none>
+emu:input: input analog mapping player:1 control:stickx : <none>
+emu:input: input analog mapping player:1 control:sticky : <none>
+emu:input: input analog mapping player:1 control:stickz : <none>
+emu:input: input analog mapping player:1 control:lightgunx : <none>
+emu:input: input analog mapping player:1 control:lightguny : <none>
+emu:input: input analog mapping player:1 control:pedalgas : <none>
+emu:input: input analog mapping player:1 control:pedalbrake : <none>
+emu:input: input analog mapping player:1 control:pedalother : <none>
+emu:input: input analog mapping player:1 control:dialx : <none>
+emu:input: input analog mapping player:1 control:dialy : <none>
+emu:input: input analog mapping player:1 control:trackballx : <none>
+emu:input: input analog mapping player:1 control:trackbally : <none>
+emu:input: input analog mapping player:1 control:mousex : <none>
+emu:input: input analog mapping player:1 control:mousey : <none>
+emu:input: input analog mapping player:2 control:paddlex : <none>
+emu:input: input analog mapping player:2 control:paddley : <none>
+emu:input: input analog mapping player:2 control:stickx : <none>
+emu:input: input analog mapping player:2 control:sticky : <none>
+emu:input: input analog mapping player:2 control:stickz : <none>
+emu:input: input analog mapping player:2 control:lightgunx : <none>
+emu:input: input analog mapping player:2 control:lightguny : <none>
+emu:input: input analog mapping player:2 control:pedalgas : <none>
+emu:input: input analog mapping player:2 control:pedalbrake : <none>
+emu:input: input analog mapping player:2 control:pedalother : <none>
+emu:input: input analog mapping player:2 control:dialx : <none>
+emu:input: input analog mapping player:2 control:dialy : <none>
+emu:input: input analog mapping player:2 control:trackballx : <none>
+emu:input: input analog mapping player:2 control:trackbally : <none>
+emu:input: input analog mapping player:2 control:mousex : <none>
+emu:input: input analog mapping player:2 control:mousey : <none>
+emu:input: input analog mapping player:3 control:paddlex : <none>
+emu:input: input analog mapping player:3 control:paddley : <none>
+emu:input: input analog mapping player:3 control:stickx : <none>
+emu:input: input analog mapping player:3 control:sticky : <none>
+emu:input: input analog mapping player:3 control:stickz : <none>
+emu:input: input analog mapping player:3 control:lightgunx : <none>
+emu:input: input analog mapping player:3 control:lightguny : <none>
+emu:input: input analog mapping player:3 control:pedalgas : <none>
+emu:input: input analog mapping player:3 control:pedalbrake : <none>
+emu:input: input analog mapping player:3 control:pedalother : <none>
+emu:input: input analog mapping player:3 control:dialx : <none>
+emu:input: input analog mapping player:3 control:dialy : <none>
+emu:input: input analog mapping player:3 control:trackballx : <none>
+emu:input: input analog mapping player:3 control:trackbally : <none>
+emu:input: input analog mapping player:3 control:mousex : <none>
+emu:input: input analog mapping player:3 control:mousey : <none>
+emu:input: input analog mapping player:4 control:paddlex : <none>
+emu:input: input analog mapping player:4 control:paddley : <none>
+emu:input: input analog mapping player:4 control:stickx : <none>
+emu:input: input analog mapping player:4 control:sticky : <none>
+emu:input: input analog mapping player:4 control:stickz : <none>
+emu:input: input analog mapping player:4 control:lightgunx : <none>
+emu:input: input analog mapping player:4 control:lightguny : <none>
+emu:input: input analog mapping player:4 control:pedalgas : <none>
+emu:input: input analog mapping player:4 control:pedalbrake : <none>
+emu:input: input analog mapping player:4 control:pedalother : <none>
+emu:input: input analog mapping player:4 control:dialx : <none>
+emu:input: input analog mapping player:4 control:dialy : <none>
+emu:input: input analog mapping player:4 control:trackballx : <none>
+emu:input: input analog mapping player:4 control:trackbally : <none>
+emu:input: input analog mapping player:4 control:mousex : <none>
+emu:input: input analog mapping player:4 control:mousey : <none>
+emu:input: input analog mapping player:5 control:paddlex : <none>
+emu:input: input analog mapping player:5 control:paddley : <none>
+emu:input: input analog mapping player:5 control:stickx : <none>
+emu:input: input analog mapping player:5 control:sticky : <none>
+emu:input: input analog mapping player:5 control:stickz : <none>
+emu:input: input analog mapping player:5 control:lightgunx : <none>
+emu:input: input analog mapping player:5 control:lightguny : <none>
+emu:input: input analog mapping player:5 control:pedalgas : <none>
+emu:input: input analog mapping player:5 control:pedalbrake : <none>
+emu:input: input analog mapping player:5 control:pedalother : <none>
+emu:input: input analog mapping player:5 control:dialx : <none>
+emu:input: input analog mapping player:5 control:dialy : <none>
+emu:input: input analog mapping player:5 control:trackballx : <none>
+emu:input: input analog mapping player:5 control:trackbally : <none>
+emu:input: input analog mapping player:5 control:mousex : <none>
+emu:input: input analog mapping player:5 control:mousey : <none>
+emu:input: input analog mapping player:6 control:paddlex : <none>
+emu:input: input analog mapping player:6 control:paddley : <none>
+emu:input: input analog mapping player:6 control:stickx : <none>
+emu:input: input analog mapping player:6 control:sticky : <none>
+emu:input: input analog mapping player:6 control:stickz : <none>
+emu:input: input analog mapping player:6 control:lightgunx : <none>
+emu:input: input analog mapping player:6 control:lightguny : <none>
+emu:input: input analog mapping player:6 control:pedalgas : <none>
+emu:input: input analog mapping player:6 control:pedalbrake : <none>
+emu:input: input analog mapping player:6 control:pedalother : <none>
+emu:input: input analog mapping player:6 control:dialx : <none>
+emu:input: input analog mapping player:6 control:dialy : <none>
+emu:input: input analog mapping player:6 control:trackballx : <none>
+emu:input: input analog mapping player:6 control:trackbally : <none>
+emu:input: input analog mapping player:6 control:mousex : <none>
+emu:input: input analog mapping player:6 control:mousey : <none>
+emu:input: input analog mapping player:7 control:paddlex : <none>
+emu:input: input analog mapping player:7 control:paddley : <none>
+emu:input: input analog mapping player:7 control:stickx : <none>
+emu:input: input analog mapping player:7 control:sticky : <none>
+emu:input: input analog mapping player:7 control:stickz : <none>
+emu:input: input analog mapping player:7 control:lightgunx : <none>
+emu:input: input analog mapping player:7 control:lightguny : <none>
+emu:input: input analog mapping player:7 control:pedalgas : <none>
+emu:input: input analog mapping player:7 control:pedalbrake : <none>
+emu:input: input analog mapping player:7 control:pedalother : <none>
+emu:input: input analog mapping player:7 control:dialx : <none>
+emu:input: input analog mapping player:7 control:dialy : <none>
+emu:input: input analog mapping player:7 control:trackballx : <none>
+emu:input: input analog mapping player:7 control:trackbally : <none>
+emu:input: input analog mapping player:7 control:mousex : <none>
+emu:input: input analog mapping player:7 control:mousey : <none>
+emu:input: input_name start
+emu:ui: helpimage auto
+emu:ui: helptag auto
+emu:ui: helptag 'keyboard[0,esc] 6 5 12 12'
+emu:ui: helptag 'keyboard[0,f1] 26 5 12 12'
+emu:ui: helptag 'keyboard[0,f2] 38 5 12 12'
+emu:ui: helptag 'keyboard[0,f3] 50 5 12 12'
+emu:ui: helptag 'keyboard[0,f4] 62 5 12 12'
+emu:ui: helptag 'keyboard[0,f5] 81 5 12 12'
+emu:ui: helptag 'keyboard[0,f6] 93 5 12 12'
+emu:ui: helptag 'keyboard[0,f7] 105 5 12 12'
+emu:ui: helptag 'keyboard[0,f8] 117 5 12 12'
+emu:ui: helptag 'keyboard[0,f9] 137 5 12 12'
+emu:ui: helptag 'keyboard[0,f10] 149 5 12 12'
+emu:ui: helptag 'keyboard[0,f11] 161 5 12 12'
+emu:ui: helptag 'keyboard[0,f12] 173 5 12 12'
+emu:ui: helptag 'keyboard[0,backquote] 6 24 12 12'
+emu:ui: helptag 'keyboard[0,1] 18 24 12 12'
+emu:ui: helptag 'keyboard[0,2] 30 24 12 12'
+emu:ui: helptag 'keyboard[0,3] 42 24 12 12'
+emu:ui: helptag 'keyboard[0,4] 54 24 12 12'
+emu:ui: helptag 'keyboard[0,5] 66 24 12 12'
+emu:ui: helptag 'keyboard[0,6] 78 24 12 12'
+emu:ui: helptag 'keyboard[0,7] 90 24 12 12'
+emu:ui: helptag 'keyboard[0,8] 102 24 12 12'
+emu:ui: helptag 'keyboard[0,9] 114 24 12 12'
+emu:ui: helptag 'keyboard[0,0] 126 24 12 12'
+emu:ui: helptag 'keyboard[0,minus] 138 24 12 12'
+emu:ui: helptag 'keyboard[0,equals] 150 24 12 12'
+emu:ui: helptag 'keyboard[0,backspace] 162 24 24 12'
+emu:ui: helptag 'keyboard[0,tab] 6 36 18 12'
+emu:ui: helptag 'keyboard[0,q] 24 36 12 12'
+emu:ui: helptag 'keyboard[0,w] 36 36 12 12'
+emu:ui: helptag 'keyboard[0,e] 48 36 12 12'
+emu:ui: helptag 'keyboard[0,r] 60 36 12 12'
+emu:ui: helptag 'keyboard[0,t] 72 36 12 12'
+emu:ui: helptag 'keyboard[0,y] 84 36 12 12'
+emu:ui: helptag 'keyboard[0,u] 96 36 12 12'
+emu:ui: helptag 'keyboard[0,i] 108 36 12 12'
+emu:ui: helptag 'keyboard[0,o] 120 36 12 12'
+emu:ui: helptag 'keyboard[0,p] 132 36 12 12'
+emu:ui: helptag 'keyboard[0,openbrace] 144 36 12 12'
+emu:ui: helptag 'keyboard[0,closebrace] 156 36 12 12'
+emu:ui: helptag 'keyboard[0,enter] 168 36 18 12'
+emu:ui: helptag 'keyboard[0,capslock] 6 48 21 12'
+emu:ui: helptag 'keyboard[0,a] 27 48 12 12'
+emu:ui: helptag 'keyboard[0,s] 39 48 12 12'
+emu:ui: helptag 'keyboard[0,d] 51 48 12 12'
+emu:ui: helptag 'keyboard[0,f] 63 48 12 12'
+emu:ui: helptag 'keyboard[0,g] 75 48 12 12'
+emu:ui: helptag 'keyboard[0,h] 87 48 12 12'
+emu:ui: helptag 'keyboard[0,j] 99 48 12 12'
+emu:ui: helptag 'keyboard[0,k] 111 48 12 12'
+emu:ui: helptag 'keyboard[0,l] 123 48 12 12'
+emu:ui: helptag 'keyboard[0,semicolon] 135 48 12 12'
+emu:ui: helptag 'keyboard[0,quote] 147 48 12 12'
+emu:ui: helptag 'keyboard[0,backslash] 159 48 12 12'
+emu:ui: helptag 'keyboard[0,enter] 171 48 15 12'
+emu:ui: helptag 'keyboard[0,lshift] 6 60 14 12'
+emu:ui: helptag 'keyboard[0,less] 20 60 12 12'
+emu:ui: helptag 'keyboard[0,z] 32 60 12 12'
+emu:ui: helptag 'keyboard[0,x] 44 60 12 12'
+emu:ui: helptag 'keyboard[0,c] 56 60 12 12'
+emu:ui: helptag 'keyboard[0,v] 68 60 12 12'
+emu:ui: helptag 'keyboard[0,b] 80 60 12 12'
+emu:ui: helptag 'keyboard[0,n] 92 60 12 12'
+emu:ui: helptag 'keyboard[0,m] 104 60 12 12'
+emu:ui: helptag 'keyboard[0,comma] 116 60 12 12'
+emu:ui: helptag 'keyboard[0,period] 128 60 12 12'
+emu:ui: helptag 'keyboard[0,slash] 140 60 12 12'
+emu:ui: helptag 'keyboard[0,rshift] 152 60 34 12'
+emu:ui: helptag 'keyboard[0,lcontrol] 6 72 14 12'
+emu:ui: helptag 'keyboard[0,lwin] 20 72 14 12'
+emu:ui: helptag 'keyboard[0,lalt] 34 72 14 12'
+emu:ui: helptag 'keyboard[0,space] 48 72 82 12'
+emu:ui: helptag 'keyboard[0,ralt] 130 72 14 12'
+emu:ui: helptag 'keyboard[0,rwin] 144 72 14 12'
+emu:ui: helptag 'keyboard[0,menu] 158 72 14 12'
+emu:ui: helptag 'keyboard[0,rcontrol] 172 72 14 12'
+emu:ui: helptag 'keyboard[0,prtscr] 195 5 12 12'
+emu:ui: helptag 'keyboard[0,scrlock] 207 5 12 12'
+emu:ui: helptag 'keyboard[0,pause] 219 5 12 12'
+emu:ui: helptag 'keyboard[0,insert] 195 24 12 12'
+emu:ui: helptag 'keyboard[0,home] 207 24 12 12'
+emu:ui: helptag 'keyboard[0,pgup] 219 24 12 12'
+emu:ui: helptag 'keyboard[0,del] 195 36 12 12'
+emu:ui: helptag 'keyboard[0,end] 207 36 12 12'
+emu:ui: helptag 'keyboard[0,pgdn] 219 36 12 12'
+emu:ui: helptag 'keyboard[0,up] 207 60 12 12'
+emu:ui: helptag 'keyboard[0,left] 195 72 12 12'
+emu:ui: helptag 'keyboard[0,down] 207 72 12 12'
+emu:ui: helptag 'keyboard[0,right] 219 72 12 12'
+emu:ui: helptag 'keyboard[0,numlock] 240 24 12 12'
+emu:ui: helptag 'keyboard[0,slash_pad] 252 24 12 12'
+emu:ui: helptag 'keyboard[0,asterisk_pad] 264 24 12 12'
+emu:ui: helptag 'keyboard[0,minus_pad] 276 24 12 12'
+emu:ui: helptag 'keyboard[0,7_pad] 240 36 12 12'
+emu:ui: helptag 'keyboard[0,8_pad] 252 36 12 12'
+emu:ui: helptag 'keyboard[0,9_pad] 264 36 12 12'
+emu:ui: helptag 'keyboard[0,plus_pad] 276 36 12 12'
+emu:ui: helptag 'keyboard[0,4_pad] 240 48 12 12'
+emu:ui: helptag 'keyboard[0,5_pad] 252 48 12 12'
+emu:ui: helptag 'keyboard[0,6_pad] 264 48 12 12'
+emu:ui: helptag 'keyboard[0,plus_pad] 276 48 12 12'
+emu:ui: helptag 'keyboard[0,1_pad] 240 60 12 12'
+emu:ui: helptag 'keyboard[0,2_pad] 252 60 12 12'
+emu:ui: helptag 'keyboard[0,3_pad] 264 60 12 12'
+emu:ui: helptag 'keyboard[0,enter_pad] 276 60 12 12'
+emu:ui: helptag 'keyboard[0,0_pad] 240 72 24 12'
+emu:ui: helptag 'keyboard[0,period_pad] 264 72 12 12'
+emu:ui: helptag 'keyboard[0,enter_pad] 276 72 12 12'
+event: event file '/home/nino/.advance/event.dat' not found
+emu: mame_game_run()
+osd: osd_get_path_count(pathtype:17)
+osd: osd_fopen(pathtype:17,pathindex:0,filename:english.lng,mode:rb)
+osd: osd_fopen() try file /home/nino/.advance/english.lng
+osd: fzopen() failed, No such file or directory
+osd: osd_fopen() -> return (nil)
+osd: osd_get_path_info(pathtype:17,pathindex:0,filename:.zip)
+osd: osd_get_path_info() try /home/nino/.advance/.zip
+osd: osd_get_path_info() -> failed
+osd: osd_fopen(pathtype:17,pathindex:1,filename:english.lng,mode:rb)
+osd: osd_fopen() try file /usr/local/share/advance/english.lng
+osd: fzopen() failed, No such file or directory
+osd: osd_fopen() -> return (nil)
+osd: osd_get_path_info(pathtype:17,pathindex:1,filename:.zip)
+osd: osd_get_path_info() try /usr/local/share/advance/.zip
+osd: osd_get_path_info() -> failed
+emu:global: osd_customize_inputport_list()
+osd: osd_display_loading_rom_message(name:b20-05-02.40)
+osd: osd_get_path_count(pathtype:1)
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf.zip
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf.zip
+osd: osd_get_path_info() -> file
+osd: osd_fopen(pathtype:1,pathindex:1,filename:opwolf.zip,mode:rb)
+osd: osd_fopen() try file /home/nino/.advance/rom/opwolf.zip
+osd: osd_fopen() -> return 0x5cf5ed0
+osd: osd_fseek(0x5cf5ed0, offset:0, whence:2)-> 0
+osd: osd_ftell(0x5cf5ed0) -> 884885
+osd: osd_fseek(0x5cf5ed0, offset:883861, whence:0)-> 0
+osd: osd_fseek(0x5cf5ed0, offset:884395, whence:0)-> 0
+osd: osd_fseek(0x5cf5ed0, offset:39702, whence:0)-> 0
+osd: osd_fseek(0x5cf5ed0, offset:39744, whence:0)-> 0
+osd: osd_fclose(0x5cf5ed0)
+osd: osd_display_loading_rom_message(name:b20-03-02.30)
+osd: osd_get_path_count(pathtype:1)
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf.zip
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf.zip
+osd: osd_get_path_info() -> file
+osd: osd_fopen(pathtype:1,pathindex:1,filename:opwolf.zip,mode:rb)
+osd: osd_fopen() try file /home/nino/.advance/rom/opwolf.zip
+osd: osd_fopen() -> return 0x5cf5ed0
+osd: osd_fseek(0x5cf5ed0, offset:0, whence:0)-> 0
+osd: osd_fseek(0x5cf5ed0, offset:42, whence:0)-> 0
+osd: osd_fclose(0x5cf5ed0)
+osd: osd_display_loading_rom_message(name:b20-04.39)
+osd: osd_get_path_count(pathtype:1)
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf.zip
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf.zip
+osd: osd_get_path_info() -> file
+osd: osd_fopen(pathtype:1,pathindex:1,filename:opwolf.zip,mode:rb)
+osd: osd_fopen() try file /home/nino/.advance/rom/opwolf.zip
+osd: osd_fopen() -> return 0x5cf5ed0
+osd: osd_fseek(0x5cf5ed0, offset:32864, whence:0)-> 0
+osd: osd_fseek(0x5cf5ed0, offset:32903, whence:0)-> 0
+osd: osd_fclose(0x5cf5ed0)
+osd: osd_display_loading_rom_message(name:b20-20.29)
+osd: osd_get_path_count(pathtype:1)
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf.zip
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf.zip
+osd: osd_get_path_info() -> file
+osd: osd_fopen(pathtype:1,pathindex:1,filename:opwolf.zip,mode:rb)
+osd: osd_fopen() try file /home/nino/.advance/rom/opwolf.zip
+osd: osd_fopen() -> return 0x5cf5ed0
+osd: osd_fseek(0x5cf5ed0, offset:862660, whence:0)-> 0
+osd: osd_fseek(0x5cf5ed0, offset:862699, whence:0)-> 0
+osd: osd_fclose(0x5cf5ed0)
+osd: osd_display_loading_rom_message(name:b20-07.10)
+osd: osd_get_path_count(pathtype:1)
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf.zip
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf.zip
+osd: osd_get_path_info() -> file
+osd: osd_fopen(pathtype:1,pathindex:1,filename:opwolf.zip,mode:rb)
+osd: osd_fopen() try file /home/nino/.advance/rom/opwolf.zip
+osd: osd_fopen() -> return 0x5cf5ed0
+osd: osd_fseek(0x5cf5ed0, offset:63924, whence:0)-> 0
+osd: osd_fseek(0x5cf5ed0, offset:63963, whence:0)-> 0
+osd: osd_fclose(0x5cf5ed0)
+osd: osd_display_loading_rom_message(name:b20-13.13)
+osd: osd_get_path_count(pathtype:1)
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf.zip
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf.zip
+osd: osd_get_path_info() -> file
+osd: osd_fopen(pathtype:1,pathindex:1,filename:opwolf.zip,mode:rb)
+osd: osd_fopen() try file /home/nino/.advance/rom/opwolf.zip
+osd: osd_fopen() -> return 0x5cf5ed0
+osd: osd_fseek(0x5cf5ed0, offset:488253, whence:0)-> 0
+osd: osd_fseek(0x5cf5ed0, offset:488292, whence:0)-> 0
+osd: osd_fclose(0x5cf5ed0)
+osd: osd_display_loading_rom_message(name:b20-14.72)
+osd: osd_get_path_count(pathtype:1)
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf.zip
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf.zip
+osd: osd_get_path_info() -> file
+osd: osd_fopen(pathtype:1,pathindex:1,filename:opwolf.zip,mode:rb)
+osd: osd_fopen() try file /home/nino/.advance/rom/opwolf.zip
+osd: osd_fopen() -> return 0x5cf5ed0
+osd: osd_fseek(0x5cf5ed0, offset:675954, whence:0)-> 0
+osd: osd_fseek(0x5cf5ed0, offset:675993, whence:0)-> 0
+osd: osd_fclose(0x5cf5ed0)
+osd: osd_display_loading_rom_message(name:b20-08.21)
+osd: osd_get_path_count(pathtype:1)
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:0,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/src/advancemame/opwolf.zip
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:1,pathindex:1,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/.advance/rom/opwolf.zip
+osd: osd_get_path_info() -> file
+osd: osd_fopen(pathtype:1,pathindex:1,filename:opwolf.zip,mode:rb)
+osd: osd_fopen() try file /home/nino/.advance/rom/opwolf.zip
+osd: osd_fopen() -> return 0x5cf5ed0
+osd: osd_fseek(0x5cf5ed0, offset:75949, whence:0)-> 0
+osd: osd_fseek(0x5cf5ed0, offset:75988, whence:0)-> 0
+osd: osd_fclose(0x5cf5ed0)
+osd: osd_display_loading_rom_message(name:(null))
+osd: osd_get_path_count(pathtype:8)
+osd: osd_fopen(pathtype:8,pathindex:0,filename:hiscore.dat,mode:rb)
+osd: osd_fopen() try file /home/nino/.advance/hiscore.dat
+osd: fzopen() failed, No such file or directory
+osd: osd_fopen() -> return (nil)
+osd: osd_get_path_info(pathtype:8,pathindex:0,filename:.zip)
+osd: osd_get_path_info() try /home/nino/.advance/.zip
+osd: osd_get_path_info() -> failed
+osd: osd_fopen(pathtype:8,pathindex:1,filename:hiscore.dat,mode:rb)
+osd: osd_fopen() try file /usr/local/share/advance/hiscore.dat
+osd: osd_fopen() -> return 0x5d3ff30
+osd: osd_fclose(0x5d3ff30)
+osd: osd_start_audio_stream(sample_rate:22050, stereo_flag:1)
+osd: osd2_sound_init(sample_rate:22050, stereo_flag:1)
+sound:sdl: soundb_sdl_init(id:-1, rate:22050, stereo:1, buffer_time:0.3)
+sound:sdl device_sdl_samples 512
+sound:sdl: driver pulse
+sound:sdl: request fragment size 512 [samples]
+sound:sdl: result fragment size 256 [samples], buffer size 1024 [bytes]
+sound: select driver sdl
+emu:sound: dft sample 512, size 512
+sound:sdl: soundb_sdl_start(silence_time:0.05)
+sound:sdl: writing 2204 bytes, 1102 sample of silence
+sound:sdl: soundb_sdl_volume(volume:1)
+osd: osd2_thread_init
+advance:thread: create
+osd: osd_start_audio_stream return 22050 rate
+glue: sound samples for frame 367
+advance:thread: start
+osd: osd_get_path_count(pathtype:5)
+osd: osd_get_path_info(pathtype:5,pathindex:0,filename:opwolf)
+osd: osd_get_path_info() try /home/nino/.advance/artwork/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:5,pathindex:0,filename:opwolf.zip)
+osd: osd_get_path_info() try /home/nino/.advance/artwork/opwolf.zip
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:5,pathindex:1,filename:opwolf)
+osd: osd_get_path_info() try /usr/local/share/advance/artwork/opwolf
+osd: osd_get_path_info() -> failed
+osd: osd_get_path_info(pathtype:5,pathindex:1,filename:opwolf.zip)
+osd: osd_get_path_info() try /usr/local/share/advance/artwork/opwolf.zip
+osd: osd_get_path_info() -> failed
+osd: osd_create_display(width:320, height:240, aspect_x:4, aspect_y:3, depth:16, colors:8194, fps:60, attributes:0)
+osd: osd2_video_init
+osd: area_size_x 320, area_size_y 240
+osd: used_size_x 320, used_size_y 240, used_pos_x 0, used_pos_y 0
+osd: aspect_x 4, aspect_y 3
+osd: bits_per_pixel 16, rgb_flag 0, colors 8194
+osd: vector_flag 0
+osd: fps 60
+emu:video: generating video modes
+advance:generate: fake "generate 0 320 320 320 320 240 240 240 240 +hsync +vsync"
+advance:generate: fake "generate-double 0 640 640 640 640 480 480 480 480 +hsync +vsync"
+advance:generate: fake "generate-triple 0 960 960 960 960 720 720 720 720 +hsync +vsync"
+advance:generate: fake "generate-quad 0 1280 1280 1280 1280 960 960 960 960 +hsync +vsync"
+emu:video: best mode 320x240, mode2x 640x480, mode3x 960x720, bits_per_pixel 16, vclock 60
+emu:video: game_area_size_x 320
+emu:video: game_area_size_y 240
+emu:video: game_used_pos_x 0
+emu:video: game_used_pos_y 0
+emu:video: game_used_size_x 320
+emu:video: game_used_size_y 240
+emu:video: game_aspect_x 0
+emu:video: game_aspect_y 0
+emu:video: video mode selection
+emu:video: accepted modeline:"generate-quad 0 1280 1280 1280 1280 960 960 960 960 +hsync +vsync"
+emu:video: accepted modeline:"generate-triple 0 960 960 960 960 720 720 720 720 +hsync +vsync"
+emu:video: accepted modeline:"generate-double 0 640 640 640 640 480 480 480 480 +hsync +vsync"
+emu:video: accepted modeline:"generate 0 320 320 320 320 240 240 240 240 +hsync +vsync"
+emu:video: 4 video modes
+emu:video: compare size integer multiplier
+emu:video: compare generate-quad/generate-triple, second is better
+emu:video: compare size integer multiplier
+emu:video: compare generate-double/generate, first is better
+emu:video: compare size integer multiplier
+emu:video: compare generate-triple/generate-double, second is better
+emu:video: compare size integer multiplier
+emu:video: compare generate-triple/generate, first is better
+emu:video: compare size integer multiplier
+emu:video: compare generate-quad/generate, first is better
+emu:video: sorted list of video modes
+emu:video:   0 modeline:"generate-double 0 640 640 640 640 480 480 480 480 +hsync +vsync"
+emu:video:   1 modeline:"generate-triple 0 960 960 960 960 720 720 720 720 +hsync +vsync"
+emu:video:   2 modeline:"generate-quad 0 1280 1280 1280 1280 960 960 960 960 +hsync +vsync"
+emu:video:   3 modeline:"generate 0 320 320 320 320 240 240 240 240 +hsync +vsync"
+advance:selected: modeline:"generate-double 0 640 640 640 640 480 480 480 480 +hsync +vsync"
+emu:ui: font computation: screen 640x480, aspect 640x480
+emu:ui: font pixel size 16x16
+font: init freetype2 library 2.5.2
+font: init freetype2 library 2.5.2
+emu:video: palette_total 8194
+emu:video: palette_dirty_total 257
+emu:video: palette_dirty_mask 00000003
+emu:video: game_visible_pos_x 0
+emu:video: game_visible_pos_y 0
+emu:video: game_visible_size_x 320
+emu:video: game_visible_size_y 240
+emu:video: mame_ui_area_set(min_x:0, min_y:0, max_x:319, max_y:239)
+video: mode_set sdl_640x480x32 640x480 bgr32 0.00/0.00
+video:sdl: sdl_mode_set()
+video:sdl: video hw_available:0
+video:sdl: video wm_available:1
+video:sdl: video blit_hw:0
+video:sdl: video blit_hw_CC:0
+video:sdl: video blit_hw_A:0
+video:sdl: video blit_sw:0
+video:sdl: video blit_sw_CC:0
+video:sdl: video blit_sw_A:0
+video:sdl: video blit_fill:0
+video:sdl: video video_mem:0 kBytes
+video:sdl: video bit:32 byte:4 8/16:8/8:8/0
+video:sdl: surface 640x480
+video:sdl: surface bit:32 byte:4 8/16:8/8:8/0
+advance: measure time failed, return 0
+WARNING:video: vsync time not measured
+video: measured/expected vert clock: 0.00/0.00 = 0 (err 0%)
+emu:video: color rgb 32-8/16,8/8,8/0, bytes_per_pixel 4
+emu:video: using 1 hardware video buffers
+emu:video: clear 0x0 640x480
+emu:video: clear 0x0 640x480
+emu:video: mode sdl_640x480x32, size 640x480, bits_per_pixel 32, bytes_per_scanline 2560, pages 1
+keyb:sdl: keyb_sdl_enable(graphics:1)
+osd: osd_get_path_count(pathtype:16)
+osd: osd_fopen(pathtype:16,pathindex:0,filename:cheat.dat,mode:rb)
+osd: osd_fopen() try file /home/nino/.advance/cheat.dat
+osd: osd_fopen() -> return 0x6609fa0
+osd: osd_fclose(0x6609fa0)
+emu:global: osd_config_load_default()
+emu:global: input default seq 'p2_button5 keyboard[0,e]'
+emu:global: input default seq 'p2_button6 keyboard[0,f]'
+emu:global: osd_config_load()
+osd: osd2_area(0, 8, 319, 247)
+emu:video: game_visible_pos_x 0
+emu:video: game_visible_pos_y 0
+emu:video: game_visible_size_x 320
+emu:video: game_visible_size_y 240
+emu:video: mame_ui_area_set(min_x:0, min_y:8, max_x:319, max_y:247)
+advance:thread: realloc sample buffer 0 samples -> 734 samples, 2936 bytes
+Soft reset
+osd: osd_reset()
+emu:video: pipeline scale from 320x240 to 640x480
+emu:video: pipeline_video 0
+emu:video: (1) palette 16>32, p 2
+emu:video: (2) xbr2x
+emu:video: (3) hcopy, p 4
+emu:video: pipeline_video 1
+emu:video: (1) palette 16>32, p 2
+emu:video: (2) xbr2x
+emu:video: pipeline_buffer
+emu:video: (1) palette 16>32, p 2
+emu:video: (2) xbr2x
+ERROR: sound buffer fifo underflow
+WARNING:emu:video: audio/video syncronization correction of -126 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -134 samples. Try increasing the 'sound_latency' option.
+osd: osd_get_path_count(pathtype:7)
+osd: osd_fopen(pathtype:7,pathindex:0,filename:opwolf.hi,mode:rb)
+osd: osd_fopen() try file /home/nino/.advance/hi/opwolf.hi
+osd: osd_fopen() -> return 0x5ead240
+osd: osd_fclose(0x5ead240)
+WARNING:emu:video: audio/video syncronization correction of -134 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -143 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -143 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -143 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -143 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -143 samples. Try increasing the 'sound_latency' option.
+log: last message repeated 5 times
+WARNING:emu:video: audio/video syncronization correction of -137 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -134 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -132 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -132 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -123 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -78 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -75 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -16 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -16 samples. Try increasing the 'sound_latency' option.
+advance: measured time 0.00181 (1/552.486)
+advance: measured time 0.002276 (1/439.367)
+advance: measured time 0.002326 (1/429.923)
+advance: measured time 0.0026 (1/384.615)
+advance: measured time 0.00271 (1/369.004)
+advance: measured time 0.003024 (1/330.688)
+advance: measured time 0.00384 (1/260.417)
+advance: measured time 0.003849 (1/259.808)
+advance: measured time 0.003994 (1/250.376)
+advance: measured time 0.004402 (1/227.169)
+advance: measured time 0.004436 (1/225.428)
+advance: measured time 0.004478 (1/223.314)
+advance: measured time 0.004491 (1/222.668)
+advance: median time 0.00384 (1/260.417) (err 21.4844%)
+emu:video: pipeline 0 -> time 0.00384
+advance: measured time 0.001622 (1/616.523)
+advance: measured time 0.001636 (1/611.247)
+advance: measured time 0.001705 (1/586.51)
+advance: measured time 0.002323 (1/430.478)
+advance: measured time 0.002373 (1/421.408)
+advance: measured time 0.002399 (1/416.84)
+advance: measured time 0.002438 (1/410.172)
+advance: measured time 0.002474 (1/404.204)
+advance: measured time 0.002713 (1/368.596)
+advance: measured time 0.00301 (1/332.226)
+advance: measured time 0.003014 (1/331.785)
+advance: measured time 0.0039 (1/256.41)
+advance: measured time 0.004019 (1/248.818)
+advance: median time 0.002438 (1/410.172) (err 3.07629%)
+emu:video: pipeline 1 -> time 0.002438
+emu:video: best is 1
+emu:video: audio/video syncronization correction of -8 samples
+emu:video: audio/video syncronization correction of 5 samples
+emu:video: audio/video syncronization correction of 6 samples
+emu:video: audio/video syncronization correction of 12 samples
+emu:video: audio/video syncronization correction of 13 samples
+WARNING:emu:video: audio/video syncronization correction of 47 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 89 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 101 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 103 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 106 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 106 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 106 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 106 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 106 samples. Try increasing the 'sound_latency' option.
+log: last message repeated 5 times
+WARNING:emu:video: audio/video syncronization correction of 103 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 103 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 101 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 88 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 83 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 30 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 29 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of 27 samples. Try increasing the 'sound_latency' option.
+emu:video: audio/video syncronization correction of 10 samples
+emu:video: audio/video syncronization correction of 10 samples
+emu:video: audio/video syncronization correction of 3 samples
+emu:video: audio/video syncronization correction of 3 samples
+emu:video: audio/video syncronization correction of -3 samples
+emu:video: audio/video syncronization correction of -3 samples
+emu:video: audio/video syncronization correction of -3 samples
+emu:video: audio/video syncronization correction of -10 samples
+emu:video: audio/video syncronization correction of -10 samples
+emu:video: audio/video syncronization correction of -14 samples
+emu:video: audio/video syncronization correction of -14 samples
+emu:video: audio/video syncronization correction of -15 samples
+WARNING:emu:video: audio/video syncronization correction of -17 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -20 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -20 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -22 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -22 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -24 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -24 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -28 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -24 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -24 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -24 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -17 samples. Try increasing the 'sound_latency' option.
+WARNING:emu:video: audio/video syncronization correction of -17 samples. Try increasing the 'sound_latency' option.
+emu:video: audio/video syncronization correction of -14 samples
+emu:video: audio/video syncronization correction of -14 samples
+emu:video: audio/video syncronization correction of -13 samples
+emu:video: audio/video syncronization correction of -13 samples
+emu:video: audio/video syncronization correction of -13 samples
+emu:video: audio/video syncronization correction of -12 samples
+emu:video: audio/video syncronization correction of -12 samples
+emu:video: audio/video syncronization correction of -12 samples
+emu:video: audio/video syncronization correction of -9 samples
+emu:video: audio/video syncronization correction of -9 samples
+emu:video: audio/video syncronization correction of -9 samples
+emu:video: audio/video syncronization correction of -8 samples
+emu:video: audio/video syncronization correction of -8 samples
+emu:video: audio/video syncronization correction of -8 samples
+emu:video: audio/video syncronization correction of -8 samples
+emu:video: audio/video syncronization correction of -8 samples
+emu:video: audio/video syncronization correction of -6 samples
+emu:video: audio/video syncronization correction of -6 samples
+emu:video: audio/video syncronization correction of -5 samples
+emu:video: audio/video syncronization correction of -5 samples
+emu:video: audio/video syncronization correction of -5 samples
+emu:video: audio/video syncronization correction of -5 samples
+emu:video: audio/video syncronization correction of -5 samples
+emu:video: audio/video syncronization correction of -4 samples
+emu:video: audio/video syncronization correction of -4 samples
+emu:video: audio/video syncronization correction of -4 samples
+emu:video: audio/video syncronization correction of -4 samples
+emu:video: audio/video syncronization correction of -3 samples
+emu:video: audio/video syncronization correction of -3 samples
+emu:video: audio/video syncronization correction of -3 samples
+emu:video: audio/video syncronization correction of -3 samples
+osd:sound: normalize factor dB 15
+sound:sdl: soundb_sdl_volume(volume:1)
+osd:sound: normalize factor dB 13
+sound:sdl: soundb_sdl_volume(volume:1)
+osd:sound: normalize factor dB 14
+sound:sdl: soundb_sdl_volume(volume:1)
+osd:sound: normalize factor dB 13
+sound:sdl: soundb_sdl_volume(volume:1)
+osd:sound: normalize factor dB 14
+sound:sdl: soundb_sdl_volume(volume:1)
+osd:sound: normalize factor dB 13
+sound:sdl: soundb_sdl_volume(volume:1)
+osd:sound: normalize factor dB 12
+sound:sdl: soundb_sdl_volume(volume:1)
+tc0140syt : Slave cpu read in mode [05]
+osd:sound: normalize factor dB 11
+sound:sdl: soundb_sdl_volume(volume:1)
+osd: osd2_video_pause(paused:1)
+sound:sdl: soundb_sdl_volume(volume:1)
+osd: osd2_video_pause(paused:0)
+sound:sdl: soundb_sdl_volume(volume:1)
+WARNING:glue: unable to convert MAME code 113 JOYCODE_1_BUTTON2
+WARNING:glue: unable to convert MAME code 113 JOYCODE_1_BUTTON2
+WARNING:glue: unable to convert MAME code 114 JOYCODE_1_BUTTON3
+WARNING:glue: unable to convert MAME code 114 JOYCODE_1_BUTTON3
+WARNING:glue: unable to convert MAME code 112 JOYCODE_1_BUTTON1
+WARNING:glue: unable to convert MAME code 112 JOYCODE_1_BUTTON1
+WARNING:glue: unable to convert MAME code 115 JOYCODE_1_BUTTON4
+WARNING:glue: unable to convert MAME code 115 JOYCODE_1_BUTTON4
+WARNING:glue: unable to convert MAME code 112 JOYCODE_1_BUTTON1
+WARNING:glue: unable to convert MAME code 112 JOYCODE_1_BUTTON1
+WARNING:glue: unable to convert MAME code 113 JOYCODE_1_BUTTON2
+WARNING:glue: unable to convert MAME code 113 JOYCODE_1_BUTTON2
+WARNING:glue: unable to convert MAME code 114 JOYCODE_1_BUTTON3
+WARNING:glue: unable to convert MAME code 114 JOYCODE_1_BUTTON3
+WARNING:glue: unable to convert MAME code 115 JOYCODE_1_BUTTON4
+WARNING:glue: unable to convert MAME code 115 JOYCODE_1_BUTTON4
+WARNING:glue: unable to convert MAME code 116 JOYCODE_1_BUTTON5
+WARNING:glue: unable to convert MAME code 116 JOYCODE_1_BUTTON5
+WARNING:glue: unable to convert MAME code 117 JOYCODE_1_BUTTON6
+WARNING:glue: unable to convert MAME code 117 JOYCODE_1_BUTTON6
+WARNING:glue: unable to convert MAME code 118 JOYCODE_1_BUTTON7
+WARNING:glue: unable to convert MAME code 118 JOYCODE_1_BUTTON7
+WARNING:glue: unable to convert MAME code 119 JOYCODE_1_BUTTON8
+WARNING:glue: unable to convert MAME code 119 JOYCODE_1_BUTTON8
+WARNING:glue: unable to convert MAME code 120 JOYCODE_1_BUTTON9
+WARNING:glue: unable to convert MAME code 120 JOYCODE_1_BUTTON9
+WARNING:glue: unable to convert MAME code 121 JOYCODE_1_BUTTON10
+WARNING:glue: unable to convert MAME code 121 JOYCODE_1_BUTTON10
+WARNING:glue: unable to convert MAME code 128 JOYCODE_1_START
+WARNING:glue: unable to convert MAME code 128 JOYCODE_1_START
+WARNING:glue: unable to convert MAME code 129 JOYCODE_1_SELECT
+WARNING:glue: unable to convert MAME code 129 JOYCODE_1_SELECT
+WARNING:glue: unable to convert MAME code 134 JOYCODE_2_BUTTON1
+WARNING:glue: unable to convert MAME code 134 JOYCODE_2_BUTTON1
+WARNING:glue: unable to convert MAME code 135 JOYCODE_2_BUTTON2
+WARNING:glue: unable to convert MAME code 135 JOYCODE_2_BUTTON2
+WARNING:glue: unable to convert MAME code 136 JOYCODE_2_BUTTON3
+WARNING:glue: unable to convert MAME code 136 JOYCODE_2_BUTTON3
+WARNING:glue: unable to convert MAME code 137 JOYCODE_2_BUTTON4
+WARNING:glue: unable to convert MAME code 137 JOYCODE_2_BUTTON4
+WARNING:glue: unable to convert MAME code 138 JOYCODE_2_BUTTON5
+WARNING:glue: unable to convert MAME code 139 JOYCODE_2_BUTTON6
+WARNING:glue: unable to convert MAME code 140 JOYCODE_2_BUTTON7
+WARNING:glue: unable to convert MAME code 140 JOYCODE_2_BUTTON7
+WARNING:glue: unable to convert MAME code 141 JOYCODE_2_BUTTON8
+WARNING:glue: unable to convert MAME code 141 JOYCODE_2_BUTTON8
+WARNING:glue: unable to convert MAME code 142 JOYCODE_2_BUTTON9
+WARNING:glue: unable to convert MAME code 142 JOYCODE_2_BUTTON9
+WARNING:glue: unable to convert MAME code 143 JOYCODE_2_BUTTON10
+WARNING:glue: unable to convert MAME code 143 JOYCODE_2_BUTTON10
+WARNING:glue: unable to convert MAME code 150 JOYCODE_2_START
+WARNING:glue: unable to convert MAME code 150 JOYCODE_2_START
+WARNING:glue: unable to convert MAME code 151 JOYCODE_2_SELECT
+WARNING:glue: unable to convert MAME code 151 JOYCODE_2_SELECT
+WARNING:glue: unable to convert MAME code 156 JOYCODE_3_BUTTON1
+WARNING:glue: unable to convert MAME code 156 JOYCODE_3_BUTTON1
+WARNING:glue: unable to convert MAME code 157 JOYCODE_3_BUTTON2
+WARNING:glue: unable to convert MAME code 157 JOYCODE_3_BUTTON2
+WARNING:glue: unable to convert MAME code 158 JOYCODE_3_BUTTON3
+WARNING:glue: unable to convert MAME code 158 JOYCODE_3_BUTTON3
+WARNING:glue: unable to convert MAME code 159 JOYCODE_3_BUTTON4
+WARNING:glue: unable to convert MAME code 159 JOYCODE_3_BUTTON4
+WARNING:glue: unable to convert MAME code 160 JOYCODE_3_BUTTON5
+WARNING:glue: unable to convert MAME code 160 JOYCODE_3_BUTTON5
+WARNING:glue: unable to convert MAME code 161 JOYCODE_3_BUTTON6
+WARNING:glue: unable to convert MAME code 161 JOYCODE_3_BUTTON6
+WARNING:glue: unable to convert MAME code 162 JOYCODE_3_BUTTON7
+WARNING:glue: unable to convert MAME code 162 JOYCODE_3_BUTTON7
+WARNING:glue: unable to convert MAME code 163 JOYCODE_3_BUTTON8
+WARNING:glue: unable to convert MAME code 163 JOYCODE_3_BUTTON8
+WARNING:glue: unable to convert MAME code 164 JOYCODE_3_BUTTON9
+WARNING:glue: unable to convert MAME code 164 JOYCODE_3_BUTTON9
+WARNING:glue: unable to convert MAME code 165 JOYCODE_3_BUTTON10
+WARNING:glue: unable to convert MAME code 165 JOYCODE_3_BUTTON10
+WARNING:glue: unable to convert MAME code 172 JOYCODE_3_START
+WARNING:glue: unable to convert MAME code 172 JOYCODE_3_START
+WARNING:glue: unable to convert MAME code 173 JOYCODE_3_SELECT
+WARNING:glue: unable to convert MAME code 173 JOYCODE_3_SELECT
+WARNING:glue: unable to convert MAME code 178 JOYCODE_4_BUTTON1
+WARNING:glue: unable to convert MAME code 178 JOYCODE_4_BUTTON1
+WARNING:glue: unable to convert MAME code 179 JOYCODE_4_BUTTON2
+WARNING:glue: unable to convert MAME code 179 JOYCODE_4_BUTTON2
+WARNING:glue: unable to convert MAME code 180 JOYCODE_4_BUTTON3
+WARNING:glue: unable to convert MAME code 180 JOYCODE_4_BUTTON3
+WARNING:glue: unable to convert MAME code 181 JOYCODE_4_BUTTON4
+WARNING:glue: unable to convert MAME code 181 JOYCODE_4_BUTTON4
+WARNING:glue: unable to convert MAME code 182 JOYCODE_4_BUTTON5
+WARNING:glue: unable to convert MAME code 182 JOYCODE_4_BUTTON5
+WARNING:glue: unable to convert MAME code 183 JOYCODE_4_BUTTON6
+WARNING:glue: unable to convert MAME code 183 JOYCODE_4_BUTTON6
+WARNING:glue: unable to convert MAME code 184 JOYCODE_4_BUTTON7
+WARNING:glue: unable to convert MAME code 184 JOYCODE_4_BUTTON7
+WARNING:glue: unable to convert MAME code 185 JOYCODE_4_BUTTON8
+WARNING:glue: unable to convert MAME code 185 JOYCODE_4_BUTTON8
+WARNING:glue: unable to convert MAME code 186 JOYCODE_4_BUTTON9
+WARNING:glue: unable to convert MAME code 186 JOYCODE_4_BUTTON9
+WARNING:glue: unable to convert MAME code 187 JOYCODE_4_BUTTON10
+WARNING:glue: unable to convert MAME code 187 JOYCODE_4_BUTTON10
+WARNING:glue: unable to convert MAME code 194 JOYCODE_4_START
+WARNING:glue: unable to convert MAME code 194 JOYCODE_4_START
+WARNING:glue: unable to convert MAME code 195 JOYCODE_4_SELECT
+WARNING:glue: unable to convert MAME code 195 JOYCODE_4_SELECT
+WARNING:glue: unable to convert MAME code 200 JOYCODE_5_BUTTON1
+WARNING:glue: unable to convert MAME code 200 JOYCODE_5_BUTTON1
+WARNING:glue: unable to convert MAME code 201 JOYCODE_5_BUTTON2
+WARNING:glue: unable to convert MAME code 201 JOYCODE_5_BUTTON2
+WARNING:glue: unable to convert MAME code 202 JOYCODE_5_BUTTON3
+WARNING:glue: unable to convert MAME code 202 JOYCODE_5_BUTTON3
+WARNING:glue: unable to convert MAME code 203 JOYCODE_5_BUTTON4
+WARNING:glue: unable to convert MAME code 203 JOYCODE_5_BUTTON4
+WARNING:glue: unable to convert MAME code 204 JOYCODE_5_BUTTON5
+WARNING:glue: unable to convert MAME code 204 JOYCODE_5_BUTTON5
+WARNING:glue: unable to convert MAME code 205 JOYCODE_5_BUTTON6
+WARNING:glue: unable to convert MAME code 205 JOYCODE_5_BUTTON6
+WARNING:glue: unable to convert MAME code 206 JOYCODE_5_BUTTON7
+WARNING:glue: unable to convert MAME code 206 JOYCODE_5_BUTTON7
+WARNING:glue: unable to convert MAME code 207 JOYCODE_5_BUTTON8
+WARNING:glue: unable to convert MAME code 207 JOYCODE_5_BUTTON8
+WARNING:glue: unable to convert MAME code 208 JOYCODE_5_BUTTON9
+WARNING:glue: unable to convert MAME code 208 JOYCODE_5_BUTTON9
+WARNING:glue: unable to convert MAME code 209 JOYCODE_5_BUTTON10
+WARNING:glue: unable to convert MAME code 209 JOYCODE_5_BUTTON10
+WARNING:glue: unable to convert MAME code 222 JOYCODE_6_BUTTON1
+WARNING:glue: unable to convert MAME code 222 JOYCODE_6_BUTTON1
+WARNING:glue: unable to convert MAME code 223 JOYCODE_6_BUTTON2
+WARNING:glue: unable to convert MAME code 223 JOYCODE_6_BUTTON2
+WARNING:glue: unable to convert MAME code 224 JOYCODE_6_BUTTON3
+WARNING:glue: unable to convert MAME code 224 JOYCODE_6_BUTTON3
+WARNING:glue: unable to convert MAME code 225 JOYCODE_6_BUTTON4
+WARNING:glue: unable to convert MAME code 225 JOYCODE_6_BUTTON4
+WARNING:glue: unable to convert MAME code 226 JOYCODE_6_BUTTON5
+WARNING:glue: unable to convert MAME code 226 JOYCODE_6_BUTTON5
+WARNING:glue: unable to convert MAME code 227 JOYCODE_6_BUTTON6
+WARNING:glue: unable to convert MAME code 227 JOYCODE_6_BUTTON6
+WARNING:glue: unable to convert MAME code 228 JOYCODE_6_BUTTON7
+WARNING:glue: unable to convert MAME code 228 JOYCODE_6_BUTTON7
+WARNING:glue: unable to convert MAME code 229 JOYCODE_6_BUTTON8
+WARNING:glue: unable to convert MAME code 229 JOYCODE_6_BUTTON8
+WARNING:glue: unable to convert MAME code 230 JOYCODE_6_BUTTON9
+WARNING:glue: unable to convert MAME code 230 JOYCODE_6_BUTTON9
+WARNING:glue: unable to convert MAME code 231 JOYCODE_6_BUTTON10
+WARNING:glue: unable to convert MAME code 231 JOYCODE_6_BUTTON10
+WARNING:glue: unable to convert MAME code 244 JOYCODE_7_BUTTON1
+WARNING:glue: unable to convert MAME code 244 JOYCODE_7_BUTTON1
+WARNING:glue: unable to convert MAME code 245 JOYCODE_7_BUTTON2
+WARNING:glue: unable to convert MAME code 245 JOYCODE_7_BUTTON2
+WARNING:glue: unable to convert MAME code 246 JOYCODE_7_BUTTON3
+WARNING:glue: unable to convert MAME code 246 JOYCODE_7_BUTTON3
+WARNING:glue: unable to convert MAME code 247 JOYCODE_7_BUTTON4
+WARNING:glue: unable to convert MAME code 247 JOYCODE_7_BUTTON4
+WARNING:glue: unable to convert MAME code 248 JOYCODE_7_BUTTON5
+WARNING:glue: unable to convert MAME code 248 JOYCODE_7_BUTTON5
+WARNING:glue: unable to convert MAME code 249 JOYCODE_7_BUTTON6
+WARNING:glue: unable to convert MAME code 249 JOYCODE_7_BUTTON6
+WARNING:glue: unable to convert MAME code 250 JOYCODE_7_BUTTON7
+WARNING:glue: unable to convert MAME code 250 JOYCODE_7_BUTTON7
+WARNING:glue: unable to convert MAME code 251 JOYCODE_7_BUTTON8
+WARNING:glue: unable to convert MAME code 251 JOYCODE_7_BUTTON8
+WARNING:glue: unable to convert MAME code 252 JOYCODE_7_BUTTON9
+WARNING:glue: unable to convert MAME code 252 JOYCODE_7_BUTTON9
+WARNING:glue: unable to convert MAME code 253 JOYCODE_7_BUTTON10
+WARNING:glue: unable to convert MAME code 253 JOYCODE_7_BUTTON10
+WARNING:glue: unable to convert MAME code 266 JOYCODE_8_BUTTON1
+WARNING:glue: unable to convert MAME code 266 JOYCODE_8_BUTTON1
+WARNING:glue: unable to convert MAME code 267 JOYCODE_8_BUTTON2
+WARNING:glue: unable to convert MAME code 267 JOYCODE_8_BUTTON2
+WARNING:glue: unable to convert MAME code 268 JOYCODE_8_BUTTON3
+WARNING:glue: unable to convert MAME code 268 JOYCODE_8_BUTTON3
+WARNING:glue: unable to convert MAME code 269 JOYCODE_8_BUTTON4
+WARNING:glue: unable to convert MAME code 269 JOYCODE_8_BUTTON4
+WARNING:glue: unable to convert MAME code 270 JOYCODE_8_BUTTON5
+WARNING:glue: unable to convert MAME code 270 JOYCODE_8_BUTTON5
+WARNING:glue: unable to convert MAME code 271 JOYCODE_8_BUTTON6
+WARNING:glue: unable to convert MAME code 271 JOYCODE_8_BUTTON6
+WARNING:glue: unable to convert MAME code 272 JOYCODE_8_BUTTON7
+WARNING:glue: unable to convert MAME code 272 JOYCODE_8_BUTTON7
+WARNING:glue: unable to convert MAME code 273 JOYCODE_8_BUTTON8
+WARNING:glue: unable to convert MAME code 273 JOYCODE_8_BUTTON8
+WARNING:glue: unable to convert MAME code 274 JOYCODE_8_BUTTON9
+WARNING:glue: unable to convert MAME code 274 JOYCODE_8_BUTTON9
+WARNING:glue: unable to convert MAME code 275 JOYCODE_8_BUTTON10
+WARNING:glue: unable to convert MAME code 275 JOYCODE_8_BUTTON10
+WARNING:glue: unable to convert MAME code 128 JOYCODE_1_START
+WARNING:glue: unable to convert MAME code 128 JOYCODE_1_START
+WARNING:glue: unable to convert MAME code 150 JOYCODE_2_START
+WARNING:glue: unable to convert MAME code 150 JOYCODE_2_START
+WARNING:glue: unable to convert MAME code 172 JOYCODE_3_START
+WARNING:glue: unable to convert MAME code 172 JOYCODE_3_START
+WARNING:glue: unable to convert MAME code 194 JOYCODE_4_START
+WARNING:glue: unable to convert MAME code 194 JOYCODE_4_START
+WARNING:glue: unable to convert MAME code 129 JOYCODE_1_SELECT
+WARNING:glue: unable to convert MAME code 129 JOYCODE_1_SELECT
+WARNING:glue: unable to convert MAME code 151 JOYCODE_2_SELECT
+WARNING:glue: unable to convert MAME code 151 JOYCODE_2_SELECT
+WARNING:glue: unable to convert MAME code 173 JOYCODE_3_SELECT
+WARNING:glue: unable to convert MAME code 173 JOYCODE_3_SELECT
+WARNING:glue: unable to convert MAME code 195 JOYCODE_4_SELECT
+WARNING:glue: unable to convert MAME code 195 JOYCODE_4_SELECT
+WARNING:glue: unable to convert MAME code 112 JOYCODE_1_BUTTON1
+WARNING:glue: unable to convert MAME code 112 JOYCODE_1_BUTTON1
+WARNING:glue: unable to convert MAME code 134 JOYCODE_2_BUTTON1
+WARNING:glue: unable to convert MAME code 134 JOYCODE_2_BUTTON1
+WARNING:glue: unable to convert MAME code 156 JOYCODE_3_BUTTON1
+WARNING:glue: unable to convert MAME code 156 JOYCODE_3_BUTTON1
+WARNING:glue: unable to convert MAME code 178 JOYCODE_4_BUTTON1
+WARNING:glue: unable to convert MAME code 178 JOYCODE_4_BUTTON1
+WARNING:glue: unable to convert MAME code 200 JOYCODE_5_BUTTON1
+WARNING:glue: unable to convert MAME code 200 JOYCODE_5_BUTTON1
+WARNING:glue: unable to convert MAME code 222 JOYCODE_6_BUTTON1
+WARNING:glue: unable to convert MAME code 222 JOYCODE_6_BUTTON1
+WARNING:glue: unable to convert MAME code 244 JOYCODE_7_BUTTON1
+WARNING:glue: unable to convert MAME code 244 JOYCODE_7_BUTTON1
+WARNING:glue: unable to convert MAME code 266 JOYCODE_8_BUTTON1
+WARNING:glue: unable to convert MAME code 266 JOYCODE_8_BUTTON1
+WARNING:glue: unable to convert MAME code 113 JOYCODE_1_BUTTON2
+WARNING:glue: unable to convert MAME code 113 JOYCODE_1_BUTTON2
+WARNING:glue: unable to convert MAME code 135 JOYCODE_2_BUTTON2
+WARNING:glue: unable to convert MAME code 135 JOYCODE_2_BUTTON2
+WARNING:glue: unable to convert MAME code 157 JOYCODE_3_BUTTON2
+WARNING:glue: unable to convert MAME code 157 JOYCODE_3_BUTTON2
+WARNING:glue: unable to convert MAME code 179 JOYCODE_4_BUTTON2
+WARNING:glue: unable to convert MAME code 179 JOYCODE_4_BUTTON2
+WARNING:glue: unable to convert MAME code 201 JOYCODE_5_BUTTON2
+WARNING:glue: unable to convert MAME code 201 JOYCODE_5_BUTTON2
+WARNING:glue: unable to convert MAME code 223 JOYCODE_6_BUTTON2
+WARNING:glue: unable to convert MAME code 223 JOYCODE_6_BUTTON2
+WARNING:glue: unable to convert MAME code 245 JOYCODE_7_BUTTON2
+WARNING:glue: unable to convert MAME code 245 JOYCODE_7_BUTTON2
+WARNING:glue: unable to convert MAME code 267 JOYCODE_8_BUTTON2
+WARNING:glue: unable to convert MAME code 267 JOYCODE_8_BUTTON2
+WARNING:glue: unable to convert MAME code 114 JOYCODE_1_BUTTON3
+WARNING:glue: unable to convert MAME code 114 JOYCODE_1_BUTTON3
+WARNING:glue: unable to convert MAME code 136 JOYCODE_2_BUTTON3
+WARNING:glue: unable to convert MAME code 136 JOYCODE_2_BUTTON3
+WARNING:glue: unable to convert MAME code 158 JOYCODE_3_BUTTON3
+WARNING:glue: unable to convert MAME code 158 JOYCODE_3_BUTTON3
+WARNING:glue: unable to convert MAME code 180 JOYCODE_4_BUTTON3
+WARNING:glue: unable to convert MAME code 180 JOYCODE_4_BUTTON3
+WARNING:glue: unable to convert MAME code 202 JOYCODE_5_BUTTON3
+WARNING:glue: unable to convert MAME code 202 JOYCODE_5_BUTTON3
+WARNING:glue: unable to convert MAME code 224 JOYCODE_6_BUTTON3
+WARNING:glue: unable to convert MAME code 224 JOYCODE_6_BUTTON3
+WARNING:glue: unable to convert MAME code 246 JOYCODE_7_BUTTON3
+WARNING:glue: unable to convert MAME code 246 JOYCODE_7_BUTTON3
+WARNING:glue: unable to convert MAME code 268 JOYCODE_8_BUTTON3
+WARNING:glue: unable to convert MAME code 268 JOYCODE_8_BUTTON3
+WARNING:glue: unable to convert MAME code 112 JOYCODE_1_BUTTON1
+WARNING:glue: unable to convert MAME code 112 JOYCODE_1_BUTTON1
+WARNING:glue: unable to convert MAME code 129 JOYCODE_1_SELECT
+global: setup port coin1
+WARNING:glue: unable to convert MAME code 151 JOYCODE_2_SELECT
+global: setup port coin2
+WARNING:glue: unable to convert MAME code 112 JOYCODE_1_BUTTON1
+global: setup port p1_button1
+WARNING:glue: unable to convert MAME code 113 JOYCODE_1_BUTTON2
+global: setup port p1_button2
+global: setup port service_coin1
+global: setup port tilt
+WARNING:glue: unable to convert MAME code 128 JOYCODE_1_START
+global: setup port start1
+WARNING:global: ignoring named Unknown/Unused switchport 5
+WARNING:global: ignoring named Unknown/Unused switchport 5
+WARNING:global: ignoring named Unknown/Unused switchport 5
+global: setup port p1_lightgun_left
+global: setup port p1_lightgun_right
+global: setup port p1_lightgun_up
+global: setup port p1_lightgun_down
+osd: osd_close_display()
+osd: osd2_video_done
+keyb:sdl: keyb_sdl_disable()
+emu:video: clear 0x0 640x480
+emu:video: clear 0x0 640x480
+video: video_mode_restore
+video:sdl: sdl_mode_done()
+video: mode_reset
+osd: osd_stop_audio_stream()
+osd: osd2_thread_done
+advance:thread: exit signal
+advance:thread: join
+advance:thread: exit
+advance:thread: done
+osd: osd2_sound_done()
+sound:sdl: soundb_sdl_stop()
+sound:sdl: soundb_sdl_done()
+osd: osd_get_path_count(pathtype:7)
+osd: osd_fopen(pathtype:7,pathindex:0,filename:opwolf.hi,mode:wb)
+osd: osd_fopen() try file /home/nino/.advance/hi/opwolf.hi
+osd: osd_fopen() -> return 0x5d42f20
+osd: osd_fclose(0x5d42f20)
+emu: *_inner_done()
+keyb:sdl: keyb_sdl_done()
+mouseb:sdl: mouseb_sdl_done()
+joystickb:none: joystickb_none_done()
+video: adv_video_done
+video:sdl: sdl_done()
+video:sdl: call SDL_QuitSubSystem(SDL_INIT_VIDEO)
+emu: os_inner_done()
+os: os_inner_done
+os: SDL_Quit()
+os: os_inner_done completed
+emu: *_done()
+emu: os_done()
+emu: conf_save()
+emu: conf_done()

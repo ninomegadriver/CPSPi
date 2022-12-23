@@ -1,0 +1,578 @@
+advance/osd/glue.c:	playback = osd_fopen(FILETYPE_INPUTLOG, 0, file, "rb", &error);
+advance/osd/glue.c:		options.language_file = mame_fopen(0, advance->language_file_buffer, FILETYPE_LANGUAGE, 0);
+advance/osd/glue.c:		options.record = mame_fopen(advance->record_file_buffer, 0, FILETYPE_INPUTLOG, 1);
+advance/osd/glue.c:		options.playback = mame_fopen(advance->playback_file_buffer, 0, FILETYPE_INPUTLOG, 0);
+advance/osd/record.c:	context->state.sound_f = fopen(context->state.sound_file_buffer, "wb");
+advance/osd/fileio.c:osd_file* osd_fopen(int pathtype, int pathindex, const char* filename, const char* mode, osd_file_error *error)
+advance/osd/fileio.c:	log_std(("osd: osd_fopen(pathtype:%d,pathindex:%d,filename:%s,mode:%s)\n", pathtype, pathindex, filename, mode));
+advance/osd/fileio.c:		log_std(("osd: osd_fopen() try %s %s\n", zip_file_buffer, file_buffer));
+advance/osd/fileio.c:			log_std(("osd: osd_fopen() -> failed, zip %s not readable\n", zip_file_buffer));
+advance/osd/fileio.c:			log_std(("osd: osd_fopen() -> failed, zip %s not openable\n", zip_file_buffer));
+advance/osd/fileio.c:		log_std(("osd: osd_fopen() try file %s\n", path_buffer));
+advance/osd/fileio.c:				/* MAME expect this error in generic_fopen() otherwise it doesn't */
+advance/osd/fileio.c:	log_std(("osd: osd_fopen() -> return %p\n", h));
+advance/osd/safequit.c:	f = fopen(file, "rt");
+advance/osd/safequit.c:			f = fopen(file, "rt");
+advance/menu/common.cc:	FILE* f = fopen(cpath_export(file), "rb");
+advance/menu/common.cc:	FILE* f = fopen(path, "rb");
+advance/vbe32/vbe.c:	f = fopen(file, "r");
+advance/zlib/zlib.h:   is as in fopen ("rb" or "wb") but can also include a compression level
+advance/zlib/zlib.h:   fileno (in the file has been previously opened with fopen).
+advance/zlib/zutil.h:#define F_OPEN(name, mode) fopen((name), (mode))
+advance/zlib/trees.c:    FILE *header = fopen("trees.h", "w");
+advance/zlib/crc32.c:        out = fopen("crc32.h", "w");
+advance/zlib/zlib-1.2.3.diff:-     fopen((name), (mode), "mbc=60", "ctx=stm", "rfm=fix", "mrs=512")
+advance/zlib/zlib-1.2.3.diff:-#  define F_OPEN(name, mode) fopen((name), (mode))
+advance/zlib/zlib-1.2.3.diff:+#define F_OPEN(name, mode) fopen((name), (mode))
+advance/linux/target.c:	f = fopen(file, "r");
+advance/windows/target.c:	f = fopen(file, "w");
+advance/windows/target.c:		log_std(("ERROR:windows: fopen(%s) failed\n", file));
+advance/windows/sdlmain.c:	file = fopen(STDOUT_FILE, "rb");
+advance/windows/sdlmain.c:	file = fopen(STDERR_FILE, "rb");
+advance/windows/sdlmain.c:		stdout = fopen(STDOUT_FILE, "w");
+advance/windows/sdlmain.c:		newfp = fopen(STDOUT_FILE, "w");
+advance/windows/sdlmain.c:		stderr = fopen(STDERR_FILE, "w");
+advance/windows/sdlmain.c:		newfp = fopen(STDERR_FILE, "w");
+advance/dos/target.c:	f = fopen(file, "w");
+advance/dos/target.c:		log_std(("dos: fopen(%s) failed\n", file));
+advance/dos/wss.c:	if (!(fp = fopen(str, "r"))) {
+advance/lib/log.c:		LOG.msg = fopen(file, "w");
+advance/lib/unzip.c:	zip->fp = fopen(zipfile, "rb");
+advance/lib/conf.c:	f = fopen(input->file_in, "rt");
+advance/lib/conf.c:	f = fopen(input->file_out, "wt");
+advance/lib/fz.c:static FILE* fopen_lock(const char* name, const char* mode)
+advance/lib/fz.c:	f = fopen(name, mode);
+advance/lib/fz.c: * The semantic is like the C fopen() function.
+advance/lib/fz.c:	f->f = fopen_lock(file, mode);
+advance/lib/fz.c: * The semantic is like the C fopen() function.
+advance/lib/fz.c:	f->f = fopen_lock(file, "rb");
+advance/lib/fz.c:	f->f = fopen_lock(file, "rb");
+advance/lib/fz.c:	f->f = fopen_lock(file, "rb");
+advance/svgalib/drivers/et6000.c:  outf = fopen(dboutfile,"w");
+advance/svgalib/drivers/et6000.c:      fdm = fopen("regset.txt","w");
+advance/vbew/vbe.c:	f = fopen(file,"r");
+advance/videow/videow.c:	f = fopen(file, "r");
+advance/videow/videow.c:	f = fopen(file, "r");
+advance/videow/videow.c:	f = fopen(file, "wb");
+advance/videow/videow.c:	f = fopen(file, "rb");
+autom4te.cache/output.0:  FILE *f = fopen ("conftest.val", "w");
+autom4te.cache/output.0:FILE *f = fopen ("conftest.out", "w");
+autom4te.cache/output.1:  FILE *f = fopen ("conftest.val", "w");
+autom4te.cache/output.1:FILE *f = fopen ("conftest.out", "w");
+configure:  FILE *f = fopen ("conftest.val", "w");
+configure:FILE *f = fopen ("conftest.out", "w");
+mess/cpu/sc61860/readpc.c:	FILE *out=fopen(argv[1],"wb");
+mess/systems/arcadia.c:	    f=fopen("chartest.bin","wb");
+mess/systems/mtx.c:		if ((f = mame_fopen(Machine->gamedrv->name, filename,
+mess/systems/mtx.c:		if ((f = mame_fopen(Machine->gamedrv->name, filename,
+mess/systems/nc.c:	file = mame_fopen(Machine->gamedrv->name, filename, FILETYPE_MEMCARD, OSD_FOPEN_READ);
+mess/systems/nc.c:    file = mame_fopen(Machine->gamedrv->name, filename, FILETYPE_MEMCARD, OSD_FOPEN_WRITE);
+mess/systems/atarist.c:					file0=mame_fopen_native(str_ptr,0);
+mess/systems/atarist.c:						file0=mame_fopen_native(str_ptr,0);
+mess/machine/am29f080.c:		file = mame_fopen(Machine->gamedrv->name, flash_name, FILETYPE_MEMCARD,OSD_FOPEN_WRITE);
+mess/machine/am29f080.c:		file = mame_fopen(Machine->gamedrv->name, flash_name, FILETYPE_MEMCARD,OSD_FOPEN_READ);
+mess/machine/99_hsgpl.c:	file = mame_fopen(Machine->gamedrv->name, "hsgpl", FILETYPE_MEMCARD, OSD_FOPEN_READ);
+mess/machine/99_hsgpl.c:		file = mame_fopen(Machine->gamedrv->name, "hsgpl", FILETYPE_MEMCARD, OSD_FOPEN_WRITE);
+mess/machine/vtech1.c:	file = image_fopen(IO_FLOPPY, id, FILETYPE_IMAGE, OSD_FOPEN_READ);
+mess/machine/genesis.c:			fp=fopen("GEN_VRAM", "w+b");
+mess/machine/genesis.c:			fp=fopen("GEN_CRAM", "w+b");
+mess/machine/genesis.c:			fp=fopen("GEN_VSRAM", "w+b");
+mess/machine/cgenie.c:			mame_fopen(Machine->gamedrv->name, tape_name, FILETYPE_IMAGE, OSD_FOPEN_WRITE);
+mess/machine/cgenie.c:			tape_get_file = mame_fopen(Machine->gamedrv->name, tape_name, FILETYPE_IMAGE, OSD_FOPEN_READ);
+mess/machine/nes.c:		prgout = fopen (outname, "wb");
+mess/machine/99_ide.c:	file = mame_fopen(Machine->gamedrv->name, "ide", FILETYPE_MEMCARD, OSD_FOPEN_READ);
+mess/machine/99_ide.c:		file = mame_fopen(Machine->gamedrv->name, "ide", FILETYPE_MEMCARD, OSD_FOPEN_WRITE);
+mess/machine/msx_slot.c:	f = fopen ("/home/sean/msx/hack/monmsx.bin", "r");
+mess/machine/msx_slot.c:	f = mame_fopen (Machine->gamedrv->name, state->sramfile, 
+mess/machine/msx_slot.c:	f = mame_fopen (Machine->gamedrv->name, state->sramfile,
+mess/machine/msx_slot.c:	f = mame_fopen (Machine->gamedrv->name, state->sramfile, 
+mess/machine/msx_slot.c:	f = mame_fopen (Machine->gamedrv->name, state->sramfile,
+mess/machine/msx_slot.c:	f = mame_fopen (Machine->gamedrv->name, state->sramfile, 
+mess/machine/msx_slot.c:	f = mame_fopen (Machine->gamedrv->name, state->sramfile,
+mess/machine/msx_slot.c:	f = mame_fopen (Machine->gamedrv->name, state->sramfile, 
+mess/machine/msx_slot.c:	f = mame_fopen (Machine->gamedrv->name, state->sramfile,
+mess/machine/trs80.c:				tape_put_file = mame_fopen(Machine->gamedrv->name, filename, FILETYPE_IMAGE, OSD_FOPEN_RW);
+mess/machine/trs80.c:				tape_put_file = mame_fopen(Machine->gamedrv->name, filename, FILETYPE_IMAGE, OSD_FOPEN_RW);
+mess/machine/trs80.c:		tape_get_file = mame_fopen(Machine->gamedrv->name, filename, FILETYPE_IMAGE, OSD_FOPEN_READ);
+mess/machine/cpm_bios.c:	lp = mame_fopen(Machine->gamedrv->name, "cpm.lst", FILETYPE_IMAGE, 1);
+mess/machine/ti85.c:				var_file = mame_fopen(Machine->gamedrv->name, var_file_name, FILETYPE_IMAGE, OSD_FOPEN_RW_CREATE);
+mess/machine/ti85.c:					backup_file = mame_fopen(Machine->gamedrv->name, backup_file_name, FILETYPE_IMAGE, OSD_FOPEN_RW_CREATE);
+mess/machine/ti85.c:				image_file = mame_fopen(Machine->gamedrv->name, image_file_name, FILETYPE_IMAGE, OSD_FOPEN_RW_CREATE);
+mess/machine/28f008sa.c:		file = mame_fopen(Machine->gamedrv->name, flash_name, FILETYPE_MEMCARD,OSD_FOPEN_WRITE);
+mess/machine/28f008sa.c:		file = mame_fopen(Machine->gamedrv->name, flash_name, FILETYPE_MEMCARD,OSD_FOPEN_READ);
+mess/machine/mc10.c:		mame_file *rom = mame_fopen(Machine->gamedrv->name, "mc10ext.rom", FILETYPE_IMAGE, 0);
+mess/hashfile.c:	hashfile->file = mame_fopen(sysname, sysname, FILETYPE_HASH, 0);
+mess/image.c:static mame_file *image_fopen_custom(mess_image *img, int filetype, int read_or_write, osd_file_error *error);
+mess/image.c:		file = image_fopen_custom(img, FILETYPE_IMAGE, OSD_FOPEN_READ, &ferr);
+mess/image.c:		file = image_fopen_custom(img, FILETYPE_IMAGE, OSD_FOPEN_WRITE, &ferr);
+mess/image.c:		file = image_fopen_custom(img, FILETYPE_IMAGE, OSD_FOPEN_RW, &ferr);
+mess/image.c:			file = image_fopen_custom(img, FILETYPE_IMAGE, OSD_FOPEN_READ, &ferr);
+mess/image.c:				file = image_fopen_custom(img, FILETYPE_IMAGE, OSD_FOPEN_RW_CREATE, &ferr);
+mess/image.c:			f = mame_fopen(Machine->gamedrv->name, nvram_filename, FILETYPE_NVRAM, 0);
+mess/image.c:			f = mame_fopen(Machine->gamedrv->name, nvram_filename, FILETYPE_NVRAM, 1);
+mess/image.c:static mame_file *image_fopen_custom(mess_image *img, int filetype, int read_or_write, osd_file_error *error)
+mess/image.c:		logerror("image_fopen: trying %s for system %s\n", img->name, sysname);
+mess/image.c:		img->fp = mame_fopen_error(sysname, img->name, filetype, read_or_write, error);
+mess/image.c:					img->fp = mame_fopen_error(sysname, newname, filetype, read_or_write, error);
+mess/image.c:		logerror("image_fopen: found image %s for system %s\n", img->name, sysname);
+mess/formats/wavfile.c:	f = fopen(fname, "rb");
+mess/formats/cassimg.c:	f = fopen(filename, "wb");
+mess/mess.c:	file = mame_fopen(Machine->gamedrv->name, filename, FILETYPE_NVRAM, OSD_FOPEN_WRITE);
+mess/artworkx.c:				artfile = mame_fopen((*driver)->name, filename, FILETYPE_ARTWORK, 0);
+mess/artworkx.c:		file = mame_fopen(Machine->gamedrv->name, ini_filename, FILETYPE_ARTWORK, 0);
+mess/artworkx.c:		file = mame_fopen(Machine->gamedrv->name, png_filename, FILETYPE_ARTWORK, 0);
+mess/devices/harddriv.c:		return (chd_interface_file *) mame_fopen(NULL, filename, FILETYPE_IMAGE, 0);
+mess/devices/mfmdisk.c:	file = image_fopen(IO_FLOPPY, id, FILETYPE_IMAGE, OSD_FOPEN_READ);
+mess/vidhrdw/v9938.c:		fp = fopen ("vram.dmp", "wb");
+mess/tools/mkimage/mkimage.c:	fd = fopen(av[2], "wb");
+mess/tools/messtest/core.c:	file = fopen(opts->script_filename, "r");
+mess/tools/messtest/testmess.c:		fp = mame_fopen(Machine->gamedrv->name, buf, FILETYPE_SCREENSHOT, 1);
+mess/tools/messtest/testmess.c:	f = fopen(filename, "r");
+mess/tools/messtest/testmess.c:		file = fopen(filename, "w");
+mess/tools/imgtool/stream.h:imgtool_stream *stream_open(const char *fname, int read_or_write);	/* similar params to mame_fopen */
+mess/tools/imgtool/stream.c:	f = fopen(zipname, "r");
+mess/tools/imgtool/stream.c:	f = osd_tool_fopen(fname, write_modes[read_or_write]);
+mess/tools/imgtool/stream.c:				s->u.f = osd_tool_fopen(s->name, "wb+");
+mess/tools/imgtool/stream.c:				s->u.f = osd_tool_fopen(s->name, "wb");
+mess/tools/imgtool/stubs.c:mame_file *mame_fopen(const char *gamename, const char *filename, int filetype, int openforwrite)
+mess/tools/imgtool/stubs.c:	return (mame_file *) fopen(buffer, "r");
+mess/tools/imgtool/tstsuite.c:	inifile = fopen(testsuitefile, "r");
+mess/tools/dat2html/dat2html.c:    dat = fopen(dat_filename, "r");
+mess/tools/dat2html/dat2html.c:	html = fopen(html_filename, "w");
+mess/tools/dat2html/dat2html.c:                    			html_system = fopen(system_filename, "w");
+mess/tools/messroms/dumpat.c:	file=fopen("dumpat.bin","wb");
+mess/tools/messroms/read6530.c:	file=fopen("6530.bin","wb");
+mess/tools/messroms/main.c:   f = fopen(fpath, "rb");
+mess/tools/messroms/dump1000.c:	file=fopen("dump1000.bin","wb");
+mess/tools/messroms/rddil24.c:	file=fopen("dil24.bin","wb");
+mess/tools/messroms/dumppc.c:	file=fopen("dump.bin","wb");
+mess/tools/messroms/read6332.c:	file=fopen("6332.bin","wb");
+mess/tools/mkhdimg/mkhdimg.c:    img = fopen(av[1], "wb");
+mess/tools/messdocs/messdocs.c:		datfile = fopen(datfile_path, "r");
+mess/tools/messdocs/messdocs.c:					sysfile = fopen(sysfilename, "w");
+mess/tools/messdocs/messdocs.c:	in = fopen(toc_filename, "r");
+mess/tools/messdocs/messdocs.c:	state.chm_toc = fopen(s, "w");
+mess/tools/messdocs/messdocs.c:	chm_hhp = fopen(s, "w");
+src/chdman.c:	outfile = fopen(outputfile, "w");
+src/chdman.c:	outfile2 = fopen(outputfile2, "wb");
+src/chdman.c:		return (chd_interface_file *) osd_tool_fopen(filename, mode);
+src/osd_tool.h:osd_tool_file *osd_tool_fopen(const char *filename, const char *mode);
+src/fileio.h:mame_file *mame_fopen(const char *gamename, const char *filename, int filetype, int openforwrite);
+src/fileio.h:mame_file *mame_fopen_error(const char *gamename, const char *filename, int filetype, int openforwrite, osd_file_error *error);
+src/fileio.h:mame_file *mame_fopen_rom(const char *gamename, const char *filename, const char *exphash);
+src/osdepend.h:/* These values are returned as error codes by osd_fopen() */
+src/osdepend.h:osd_file *osd_fopen(int pathtype, int pathindex, const char *filename, const char *mode, osd_file_error *error);
+src/romload.c:	f = fopen("romload.log", opened++ ? "a" : "w");
+src/romload.c:			romdata->file = mame_fopen_rom(drv->name, ROM_GETNAME(romp), ROM_GETHASHDATA(romp));
+src/cpu/tms32010/dis32010.c:	if(!(F=fopen(argv[1],"rb")))
+src/cpu/powerpc/ppcdrc.c:	temp = fopen("code.bin", "wb");
+src/cpu/tms32025/dis32025.c:	if(!(F=fopen(argv[1],"rb")))
+src/cpu/adsp2100/adsp2100.c:		FILE *log = fopen("adsp.hot", "w");
+src/cpu/pic16c5x/dis16c5x.c:	if(!(F=fopen(argv[1],"rb")))
+src/cpu/mips/mips3drc.c:		f = fopen("mips3drc.asm", "w");
+src/cpu/mips/dismips.c:	f=fopen (filename,"rb");
+src/cpu/tms34010/dis34010.c:	f=fopen (filename,"rb");
+src/cpu/rsp/rsp.c:		dasm = fopen("rsp_disasm.txt", "wt");
+src/cpu/rsp/rsp.c:		dmem = fopen("rsp_dmem.txt", "wt");
+src/cpu/rsp/rsp.c:	exec_output = fopen("rsp_execute.txt", "wt");
+src/cpu/rsp/rsp.c:		dasm = fopen("rsp_disasm.txt", "wt");
+src/cpu/rsp/rsp.c:		dmem = fopen("rsp_dmem.txt", "wt");
+src/cpu/m68000/m68kmake.c:	if((g_prototype_file = fopen(filename, "w")) == NULL)
+src/cpu/m68000/m68kmake.c:	if((g_table_file = fopen(filename, "w")) == NULL)
+src/cpu/m68000/m68kmake.c:	if((g_ops_ac_file = fopen(filename, "w")) == NULL)
+src/cpu/m68000/m68kmake.c:	if((g_ops_dm_file = fopen(filename, "w")) == NULL)
+src/cpu/m68000/m68kmake.c:	if((g_ops_nz_file = fopen(filename, "w")) == NULL)
+src/cpu/m68000/m68kmake.c:	if((g_input_file=fopen(g_input_filename, "r")) == NULL)
+src/cpu/m68000/m68kmake.c:	if((g_prototype_file = fopen(filename, "wt")) == NULL)
+src/cpu/m68000/m68kmake.c:	if((g_table_file = fopen(filename, "wt")) == NULL)
+src/cpu/m68000/m68kmake.c:	if((g_ops_ac_file = fopen(filename, "wt")) == NULL)
+src/cpu/m68000/m68kmake.c:	if((g_ops_dm_file = fopen(filename, "wt")) == NULL)
+src/cpu/m68000/m68kmake.c:	if((g_ops_nz_file = fopen(filename, "wt")) == NULL)
+src/cpu/m68000/m68kmake.c:	if((g_input_file=fopen(g_input_filename, "rt")) == NULL)
+src/audit.c:		void* file = mame_fopen(drv->name, filename, FILETYPE_IMAGE, 0);
+src/audit.c:		f = mame_fopen (gamedrv->name, samplenames[j], FILETYPE_SAMPLE, 0);
+src/audit.c:			f = mame_fopen (sharedname, samplenames[j], FILETYPE_SAMPLE, 0);
+src/hiscore.c:		mame_file *f = mame_fopen (Machine->gamedrv->name, 0, FILETYPE_HIGHSCORE, 0);
+src/hiscore.c:		mame_file *f = mame_fopen (Machine->gamedrv->name, 0, FILETYPE_HIGHSCORE, 1);
+src/hiscore.c:	f = mame_fopen (NULL, db_filename, FILETYPE_HIGHSCORE_DB, 0);
+src/chdcd.c:	f = fopen(file, "rb");
+src/chdcd.c:	infile = fopen(tocfname, "rt");
+src/machine/atari.c:	basic_fp = mame_fopen(Machine->gamedrv->name, filename, FILETYPE_ROM, 0);
+src/machine/harddriv.c:		if (!commands) commands = fopen("commands.log", "w");
+src/machine/kaneko16.c:			if ((f = mame_fopen(Machine->gamedrv->name,0,FILETYPE_NVRAM,0)) != 0)
+src/machine/kaneko16.c:			if ((f = mame_fopen(Machine->gamedrv->name,0,FILETYPE_NVRAM,1)) != 0)
+src/machine/kaneko16.c:			if ((f = mame_fopen(Machine->gamedrv->name,0,FILETYPE_NVRAM,0)) != 0)
+src/machine/kaneko16.c:			if ((f = mame_fopen(Machine->gamedrv->name,0,FILETYPE_NVRAM,1)) != 0)
+src/machine/kaneko16.c:			if ((f = mame_fopen(Machine->gamedrv->name,0,FILETYPE_NVRAM,1)) != 0)
+src/machine/kaneko16.c:			if ((f = mame_fopen(Machine->gamedrv->name,0,FILETYPE_NVRAM,0)) != 0)
+src/machine/kaneko16.c:			if ((f = mame_fopen(Machine->gamedrv->name,0,FILETYPE_NVRAM,1)) != 0)
+src/machine/segacrpt.c:	f = fopen("table","rb");
+src/machine/scudsp.c:        log_file = fopen( "dsp.log", "a" );
+src/machine/scudsp.c:        log_file = fopen( "dsp.log", "a" );
+src/machine/scudsp.c:    	log_file = fopen("dsp.log", "a");
+src/machine/atarigen.c:		if (!out) out = fopen("scroll.log", "w");
+src/machine/asic65.c:	if (!asic65_log) asic65_log = fopen("asic65.log", "w");
+src/machine/asic65.c:	if (!asic65_log) asic65_log = fopen("asic65.log", "w");
+src/machine/midwayic.c:		nvramlog = fopen("nvram.log", "w");
+src/machine/kabuki.c:        f = fopen("a","wb");
+src/machine/slapstic.c:		slapsticlog = fopen("slapstic.log", "w");
+src/machine/mc146818.c:	file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_NVRAM, 0);
+src/machine/mc146818.c:	file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_NVRAM, 1);
+src/machine/generic.c:		mame_file *nvram_file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_NVRAM, 0);
+src/machine/generic.c:		mame_file *nvram_file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_NVRAM, 1);
+src/machine/generic.c:		file = mame_fopen(Machine->gamedrv->name, name, FILETYPE_MEMCARD, FALSE);
+src/machine/generic.c:	file = mame_fopen(Machine->gamedrv->name, name, FILETYPE_MEMCARD, TRUE);
+src/machine/generic.c:	file = mame_fopen(Machine->gamedrv->name, name, FILETYPE_MEMCARD, FALSE);
+src/machine/generic.c:	file = mame_fopen(Machine->gamedrv->name, name, FILETYPE_MEMCARD, TRUE);
+src/sndhrdw/exidy440.c:		debuglog = fopen("sound.log", "w");
+src/sndhrdw/exidy440.c:	wavfile = fopen(file_name, "wb");
+src/sndhrdw/gridlee.c:f = fopen("sound.log", first ? "w" : "a");
+src/video.c:static mame_file *mame_fopen_next(int filetype)
+src/video.c:    return (mame_fopen(Machine->gamedrv->name, name, filetype, 1));
+src/video.c:	if ((fp = mame_fopen_next(FILETYPE_SCREENSHOT)) != NULL)
+src/video.c:		movie_file = mame_fopen(Machine->gamedrv->name, name, FILETYPE_MOVIE, 1);
+src/video.c:		movie_file = mame_fopen_next(FILETYPE_MOVIE);
+src/debug/debugcmt.c: 		mame_file *fp = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_COMMENT, 1);
+src/debug/debugcmt.c:	mame_file *fp = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_COMMENT, 0);
+src/debug/mamedbg.c:			TRACE.file = fopen(name,"w");
+src/debug/mamedbg.c:	file = fopen(filename, "w");
+src/debug/mamedbg.c:	file = fopen(filename, "w");
+src/debug/mamedbg.c:	file = fopen(filename, "wb");
+src/debug/mamedbg.c:	file = fopen( filename, "r" );
+src/debug/mamedbg.c:		file = fopen( filename, "r" );
+src/debug/debugcpu.c:		debug_source_file = fopen(file, "r");
+src/debug/debugcmd.c:	f = fopen(param[0], "wb");
+src/debug/debugcmd.c:	f = fopen(param[0], "w");
+src/debug/debugcmd.c:	f = fopen(param[0], "w");
+src/debug/debugcmd.c:		f = fopen(filename, mode);
+src/debug/debugcmd.c:		mame_file *fp = mame_fopen(Machine->gamedrv->name, param[0], FILETYPE_SCREENSHOT, 1);
+src/debug/debugcmd.c:	file = fopen(filename, "w");
+src/artwork.c:			artfile = mame_fopen((*driver)->name, filename, FILETYPE_ARTWORK, 0);
+src/artwork.c:	file = mame_fopen(gamename, filename, FILETYPE_ARTWORK, 0);
+src/unzip.c:	zip->fp = osd_fopen(pathtype, pathindex, zipfile, "rb", &error);
+src/unzip.c:		zip->fp = osd_fopen(zip->pathtype, zip->pathindex, zip->zip, "rb", &error);
+src/vidhrdw/konamiic.c:	fp=fopen(chip?"SPRITE1.DMP":"SPRITE0.DMP", "w+b");
+src/vidhrdw/konamiic.c:	fp=fopen("TILE.DMP", "w+b");
+src/vidhrdw/konamiic.c:	fp=fopen("SPRITE.DMP", "w+b");
+src/vidhrdw/konamiic.c:	fp=fopen("SPRITE.DMP", "w+b");
+src/vidhrdw/konamiic.c:	fp=fopen("SPRITE.DMP", "w+b");
+src/vidhrdw/artmagic.c:	if (!f) f = fopen("artmagic.log", "w");
+src/vidhrdw/namcos22.c:      FILE *f = fopen( "dump.txt", "wb" );
+src/vidhrdw/namcos22.c:      FILE *f = fopen( "dump.txt", "wb" );
+src/vidhrdw/segas18.c:		FILE *f = fopen("vdp.bin", "w");
+src/vidhrdw/model1.c:			fp=fopen("tgp-ram.bin", "w+b");
+src/vidhrdw/exerion.c:	sprite_log = fopen ("sprite.log","w");
+src/vidhrdw/stvvdp2.c:		fp=fopen("mamevdp1", "w+b");
+src/vidhrdw/stvvdp2.c:		fp=fopen("vdp1_vram.bin", "r+b");
+src/vidhrdw/stvvdp2.c:	fp=fopen("workraml.dmp", "w+b");
+src/vidhrdw/stvvdp2.c:	fp=fopen("workramh.dmp", "w+b");
+src/vidhrdw/stvvdp2.c:	fp=fopen("scu.dmp", "w+b");
+src/vidhrdw/stvvdp2.c:	fp=fopen("stv_a0_vram.dmp", "w+b");
+src/vidhrdw/stvvdp2.c:	fp=fopen("stv_a1_vram.dmp", "w+b");
+src/vidhrdw/stvvdp2.c:	fp=fopen("stv_b0_vram.dmp", "w+b");
+src/vidhrdw/stvvdp2.c:	fp=fopen("stv_b1_vram.dmp", "w+b");
+src/vidhrdw/stvvdp2.c:	fp=fopen("cram.dmp", "w+b");
+src/vidhrdw/stvvdp2.c:	fp=fopen("68k.dmp", "w+b");
+src/vidhrdw/psx.c:		f = fopen( "dump.txt", "w" );
+src/vidhrdw/psx.c:		f = fopen( "VRAM.BIN", "wb" );
+src/vidhrdw/psx.c:		f = fopen( "VRAM.BIN", "rb" );
+src/vidhrdw/st0016.c:		FILE *p=fopen("vram.bin","wb");
+src/vidhrdw/st0016.c:		p=fopen("vram.txt","wt");
+src/vidhrdw/csk.c:		FILE * f = fopen("dump.bin", "wb");
+src/vidhrdw/n64.c:	rdp_exec = fopen("rdp_execute.txt", "wt");
+src/vidhrdw/btoads.c:		f = fopen(name, "w");
+src/vidhrdw/speedspn.c:		f = fopen("vidram.bin","wb");
+src/vidhrdw/lethal.c:		fp=fopen("K056832_videoram", "w+b");
+src/vidhrdw/segas32.c:		FILE *f = fopen("sprite.txt", "w");
+src/vidhrdw/segas32.c:		f = fopen("nbg0.txt", "w");
+src/vidhrdw/segas32.c:		f = fopen("nbg1.txt", "w");
+src/vidhrdw/segas32.c:		f = fopen("nbg2.txt", "w");
+src/vidhrdw/segas32.c:		f = fopen("nbg3.txt", "w");
+src/vidhrdw/segas32.c:		FILE *f = fopen("sprite.txt", "w");
+src/vidhrdw/cps1.c:	fp=fopen("SCROLL1.DMP", "w+b");
+src/vidhrdw/cps1.c:	fp=fopen("SCROLL2.DMP", "w+b");
+src/vidhrdw/cps1.c:	fp=fopen("SCROLL3.DMP", "w+b");
+src/vidhrdw/cps1.c:    fp=fopen("OBJ.DMP", "w+b");
+src/vidhrdw/cps1.c:        fp=fopen("OBJCPS2.DMP", "w+b");
+src/vidhrdw/cps1.c:        fp=fopen("CPS2OUTP.DMP", "w+b");
+src/vidhrdw/cps1.c:	fp=fopen("OTHER.DMP", "w+b");
+src/vidhrdw/cps1.c:	fp=fopen("PALETTE.DMP", "w+b");
+src/vidhrdw/cps1.c:	fp=fopen("OUTPUT.DMP", "w+b");
+src/vidhrdw/cps1.c:	fp=fopen("VIDEO.DMP", "w+b");
+src/vidhrdw/funybubl.c:        fp=fopen("funnybubsprites", "w+b");
+src/vidhrdw/stvvdp1.c://      fp=fopen("vdp1_ram.dmp", "w+b");
+src/mame.c:	file = mame_fopen(Machine->gamedrv->name, saveload_pending_file, FILETYPE_STATE, 1);
+src/mame.c:	file = mame_fopen(Machine->gamedrv->name, saveload_pending_file, FILETYPE_STATE, 0);
+src/config.c:		file = mame_fopen(NULL, options.controller, FILETYPE_CTRLR, 0);
+src/config.c:	file = mame_fopen("default", 0, FILETYPE_CONFIG, 0);
+src/config.c:	file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_CONFIG, 0);
+src/config.c:	file = mame_fopen("default", 0, FILETYPE_CONFIG, 1);
+src/config.c:	file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_CONFIG, 1);
+src/sound/ym2413.c:	sample[0]=fopen("sampsum.pcm","wb");
+src/sound/ym2413.c:	cymfile = fopen("2413_.cym","wb");
+src/sound/wavwrite.c:	wav->file = fopen(filename, "wb");
+src/sound/fmopl.c:	sample[0]=fopen("sampsum.pcm","wb");
+src/sound/fmopl.c:	cymfile = fopen("3812_.cym","wb");
+src/sound/ymf262.c:	sample[0]=fopen("sampsum.pcm","wb");
+src/sound/ymf262.c:	cymfile = fopen("ymf262_.cym","wb");
+src/sound/es5506.c:		eslog = fopen("es.log", "w");
+src/sound/ym2151.c:	sample[8]=fopen("sampsum.pcm","wb");
+src/sound/ym2151.c:	sample[0]=fopen("samp0.pcm","wb");
+src/sound/ym2151.c:	sample[1]=fopen("samp1.pcm","wb");
+src/sound/ym2151.c:	sample[2]=fopen("samp2.pcm","wb");
+src/sound/ym2151.c:	sample[3]=fopen("samp3.pcm","wb");
+src/sound/ym2151.c:	sample[4]=fopen("samp4.pcm","wb");
+src/sound/ym2151.c:	sample[5]=fopen("samp5.pcm","wb");
+src/sound/ym2151.c:	sample[6]=fopen("samp6.pcm","wb");
+src/sound/ym2151.c:	sample[7]=fopen("samp7.pcm","wb");
+src/sound/ym2151.c:	cymfile = fopen("2151_.cym","wb");
+src/sound/samples.c:			f = mame_fopen(basename, samplenames[i+skipfirst], FILETYPE_SAMPLE, 0);
+src/sound/samples.c:				f = mame_fopen(samplenames[0] + 1, samplenames[i+skipfirst], FILETYPE_SAMPLE, 0);
+src/sound/msm5232.c:	sample[8]=fopen("sampsum.pcm","wb");
+src/sound/msm5232.c:	sample[0]=fopen("samp0.pcm","wb");
+src/sound/msm5232.c:	sample[1]=fopen("samp1.pcm","wb");
+src/sound/msm5232.c:	sample[2]=fopen("samp2.pcm","wb");
+src/sound/msm5232.c:	sample[3]=fopen("samp3.pcm","wb");
+src/sound/msm5232.c:	sample[4]=fopen("samp4.pcm","wb");
+src/sound/msm5232.c:	sample[5]=fopen("samp5.pcm","wb");
+src/sound/msm5232.c:	sample[6]=fopen("samp6.pcm","wb");
+src/sound/msm5232.c:	sample[7]=fopen("samp7.pcm","wb");
+src/sound/qsound.c:	chip->fpRawDataR=fopen("qsoundr.raw", "w+b");
+src/sound/qsound.c:	chip->fpRawDataL=fopen("qsoundl.raw", "w+b");
+src/sound/namcona.c:	FILE *f = fopen("snd.txt","w");
+src/sound/fm.c:	sample[0]=fopen("sampsum.pcm","wb");
+src/sound/discrete.c:		discrete_current_context->disclogfile = fopen(name, "w");
+src/sound/discrete.c:		info->disc_csv_file[log_num] = fopen(name, "w");;
+src/drivers/konamigx.c:                f = fopen("esc.bin", "wb");
+src/drivers/stv.c:		print_file = fopen( "stvinfo.txt", "a" );
+src/drivers/taitojc.c:        FILE *file = fopen("dspdata1.bin", "a+b");
+src/drivers/cavepgm.c:			out = fopen("z80ram.bin", "wb");
+src/drivers/snowbros.c:		fp=fopen("cookie", "w+b");
+src/drivers/leland.c:    output = fopen("indyheat.m", "w");
+src/drivers/tumbleb.c:		fp=fopen("hcatch", "w+b");
+src/drivers/jchan.c:			if ((f = mame_fopen(Machine->gamedrv->name,0,FILETYPE_NVRAM,0)) != 0)
+src/drivers/jchan.c:			if ((f = mame_fopen(Machine->gamedrv->name,0,FILETYPE_NVRAM,1)) != 0)
+src/drivers/pgm.c:			out = fopen("z80ram.bin", "wb");
+src/drivers/wheelfir.c:        fp=fopen("wheelfir_pal.dmp", "w+b");
+src/memory.c:		file = fopen("memdump.log", "w");
+src/jedutil.c:	file = fopen(srcfile, "rb");
+src/jedutil.c:	file = fopen(dstfile, "wb");
+src/cheat.c:	theFile = mame_fopen(NULL, fileName, FILETYPE_CHEAT, 0);
+src/cheat.c:	theFile = mame_fopen(NULL, mainDatabaseName, FILETYPE_CHEAT, 1);
+src/fileio.c:static mame_file *generic_fopen(int pathtype, const char *gamename, const char *filename, const char *hash, UINT32 flags, osd_file_error *error);
+src/fileio.c:    call mame_fopen before fileio_init
+src/fileio.c:    mame_fopen_error - open a file for access and
+src/fileio.c:mame_file *mame_fopen_error(const char *gamename, const char *filename, int filetype, int openforwrite, osd_file_error *error)
+src/fileio.c:				logerror("mame_fopen: type %02x write not supported\n", filetype);
+src/fileio.c:				logerror("mame_fopen: type %02x read not supported\n", filetype);
+src/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, openforwrite ? FILEFLAG_OPENWRITE : FILEFLAG_OPENREAD, error);
+src/fileio.c:			return generic_fopen(filetype, NULL, gamename, 0, openforwrite ? FILEFLAG_OPENWRITE : FILEFLAG_OPENREAD, error);
+src/fileio.c:			return generic_fopen(filetype, gamename, filename, 0, openforwrite ? FILEFLAG_OPENWRITE : FILEFLAG_OPENREAD, error);
+src/fileio.c:			return generic_fopen(filetype, gamename, filename, 0, FILEFLAG_OPENREAD | FILEFLAG_HASH, error);
+src/fileio.c:			return generic_fopen(filetype, gamename, filename, 0, openforwrite ? FILEFLAG_OPENWRITE | FILEFLAG_CREATE_GAMEDIR : FILEFLAG_OPENREAD, error);
+src/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, FILEFLAG_OPENREAD | (openforwrite ? FILEFLAG_OPENWRITE : 0), error);
+src/fileio.c:			return generic_fopen(filetype, gamename, filename, 0, FILEFLAG_OPENREAD | FILEFLAG_NOZIP, error);
+src/fileio.c:				return generic_fopen(filetype, gamename, filename, 0, flags, error);
+src/fileio.c:			return generic_fopen(filetype, gamename, filename, 0, FILEFLAG_OPENREAD | FILEFLAG_OPENWRITE, error);
+src/fileio.c:				return generic_fopen(filetype, gamename, filename, 0, openforwrite ? FILEFLAG_OPENWRITE | FILEFLAG_CREATE_GAMEDIR : FILEFLAG_OPENREAD, error);
+src/fileio.c:			return generic_fopen(filetype, NULL, gamename, 0, openforwrite ? FILEFLAG_OPENWRITE : FILEFLAG_OPENREAD, error);
+src/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, openforwrite ? FILEFLAG_OPENWRITE : FILEFLAG_OPENREAD, error);
+src/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, FILEFLAG_ALLOW_ABSOLUTE | (openforwrite ? FILEFLAG_OPENWRITE : FILEFLAG_OPENREAD), error);
+src/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, FILEFLAG_OPENWRITE, error);
+src/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, FILEFLAG_ALLOW_ABSOLUTE | FILEFLAG_OPENWRITE, error);
+src/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, FILEFLAG_OPENREAD, error);
+src/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, FILEFLAG_ALLOW_ABSOLUTE | FILEFLAG_OPENREAD, error);
+src/fileio.c:			logerror("mame_fopen(): unknown filetype %02x\n", filetype);
+src/fileio.c:    mame_fopen - open a file without returning
+src/fileio.c:mame_file *mame_fopen(const char *gamename, const char *filename, int filetype, int openforwrite)
+src/fileio.c:	return mame_fopen_error(gamename, filename, filetype, openforwrite, NULL);
+src/fileio.c:    mame_fopen_rom - similar to mame_fopen, but
+src/fileio.c:mame_file *mame_fopen_rom(const char *gamename, const char *filename, const char *exphash)
+src/fileio.c:	return generic_fopen(FILETYPE_ROM, gamename, filename, exphash, FILEFLAG_OPENREAD | FILEFLAG_HASH, NULL);
+src/fileio.c:	file = generic_fopen(FILETYPE_ROM, gamename, filename, hash, FILEFLAG_OPENREAD | FILEFLAG_HASH | FILEFLAG_VERIFY_ONLY, NULL);
+src/fileio.c:    generic_fopen - master logic for finding and
+src/fileio.c:static mame_file *generic_fopen(int pathtype, const char *gamename, const char *filename, const char* hash, UINT32 flags, osd_file_error *error)
+src/fileio.c:	VPRINTF(("generic_fopen(%d, %s, %s, %s, %X)\n", pathcount, gamename, filename, extension, flags));
+src/fileio.c:		fprintf(stderr, "Can't use HASH option with WRITE option in generic_fopen!\n");
+src/fileio.c:				file.file = osd_fopen(pathtype, pathindex, name, access_modes[flags & 7], error);
+src/fileio.c:					file.file = osd_fopen(pathtype, pathindex, name, "w+b", error);
+src/fileio.c:							VPRINTF(("Using (mame_fopen) zip file for %s\n", filename));
+src/fileio.c:						VPRINTF(("Using (mame_fopen) zip file for %s\n", filename));
+src/fileio.c:	f = osd_fopen(pathtype, pathindex, file, "rb", &dummy);
+src/fileio.c:			void *file = mame_fopen(drv->name, filename, FILETYPE_IMAGE, 0);
+src/fileio.c:	return (chd_interface_file *)mame_fopen(NULL, filename, FILETYPE_IMAGE_DIFF, 1);
+srcmess/chdman.c:	outfile = fopen(outputfile, "w");
+srcmess/chdman.c:	outfile2 = fopen(outputfile2, "wb");
+srcmess/chdman.c:		return (chd_interface_file *) osd_tool_fopen(filename, mode);
+srcmess/fileio.h:mame_file *mame_fopen(const char *gamename, const char *filename, int filetype, int openforwrite);
+srcmess/fileio.h:mame_file *mame_fopen_error(const char *gamename, const char *filename, int filetype, int openforwrite, osd_file_error *error);
+srcmess/fileio.h:mame_file *mame_fopen_rom(const char *gamename, const char *filename, const char *exphash);
+srcmess/osdepend.h:/* These values are returned as error codes by osd_fopen() */
+srcmess/osdepend.h:osd_file *osd_fopen(int pathtype, int pathindex, const char *filename, const char *mode, osd_file_error *error);
+srcmess/romload.c:	f = fopen("romload.log", opened++ ? "a" : "w");
+srcmess/romload.c:			romdata->file = mame_fopen_rom(drv->name, ROM_GETNAME(romp), ROM_GETHASHDATA(romp));
+srcmess/cpu/powerpc/ppcdrc.c:	temp = fopen("code.bin", "wb");
+srcmess/cpu/adsp2100/adsp2100.c:		FILE *log = fopen("adsp.hot", "w");
+srcmess/cpu/mips/mips3drc.c:		f = fopen("mips3drc.asm", "w");
+srcmess/cpu/mips/dismips.c:	f=fopen (filename,"rb");
+srcmess/cpu/rsp/rsp.c:		dasm = fopen("rsp_disasm.txt", "wt");
+srcmess/cpu/rsp/rsp.c:		dmem = fopen("rsp_dmem.txt", "wt");
+srcmess/cpu/rsp/rsp.c:	exec_output = fopen("rsp_execute.txt", "wt");
+srcmess/cpu/rsp/rsp.c:		dasm = fopen("rsp_disasm.txt", "wt");
+srcmess/cpu/rsp/rsp.c:		dmem = fopen("rsp_dmem.txt", "wt");
+srcmess/cpu/m68000/m68kmake.c:	if((g_prototype_file = fopen(filename, "w")) == NULL)
+srcmess/cpu/m68000/m68kmake.c:	if((g_table_file = fopen(filename, "w")) == NULL)
+srcmess/cpu/m68000/m68kmake.c:	if((g_ops_ac_file = fopen(filename, "w")) == NULL)
+srcmess/cpu/m68000/m68kmake.c:	if((g_ops_dm_file = fopen(filename, "w")) == NULL)
+srcmess/cpu/m68000/m68kmake.c:	if((g_ops_nz_file = fopen(filename, "w")) == NULL)
+srcmess/cpu/m68000/m68kmake.c:	if((g_input_file=fopen(g_input_filename, "r")) == NULL)
+srcmess/cpu/m68000/m68kmake.c:	if((g_prototype_file = fopen(filename, "wt")) == NULL)
+srcmess/cpu/m68000/m68kmake.c:	if((g_table_file = fopen(filename, "wt")) == NULL)
+srcmess/cpu/m68000/m68kmake.c:	if((g_ops_ac_file = fopen(filename, "wt")) == NULL)
+srcmess/cpu/m68000/m68kmake.c:	if((g_ops_dm_file = fopen(filename, "wt")) == NULL)
+srcmess/cpu/m68000/m68kmake.c:	if((g_ops_nz_file = fopen(filename, "wt")) == NULL)
+srcmess/cpu/m68000/m68kmake.c:	if((g_input_file=fopen(g_input_filename, "rt")) == NULL)
+srcmess/audit.c:		void* file = mame_fopen(drv->name, filename, FILETYPE_IMAGE, 0);
+srcmess/audit.c:		f = mame_fopen (gamedrv->name, samplenames[j], FILETYPE_SAMPLE, 0);
+srcmess/audit.c:			f = mame_fopen (sharedname, samplenames[j], FILETYPE_SAMPLE, 0);
+srcmess/hiscore.c:		mame_file *f = mame_fopen (Machine->gamedrv->name, 0, FILETYPE_HIGHSCORE, 0);
+srcmess/hiscore.c:		mame_file *f = mame_fopen (Machine->gamedrv->name, 0, FILETYPE_HIGHSCORE, 1);
+srcmess/hiscore.c:	f = mame_fopen (NULL, db_filename, FILETYPE_HIGHSCORE_DB, 0);
+srcmess/chdcd.c:	f = fopen(file, "rb");
+srcmess/chdcd.c:	infile = fopen(tocfname, "rt");
+srcmess/machine/atari.c:	basic_fp = mame_fopen(Machine->gamedrv->name, filename, FILETYPE_ROM, 0);
+srcmess/machine/scudsp.c:        log_file = fopen( "dsp.log", "a" );
+srcmess/machine/scudsp.c:        log_file = fopen( "dsp.log", "a" );
+srcmess/machine/scudsp.c:    	log_file = fopen("dsp.log", "a");
+srcmess/machine/mc146818.c:	file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_NVRAM, 0);
+srcmess/machine/mc146818.c:	file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_NVRAM, 1);
+srcmess/machine/generic.c:		mame_file *nvram_file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_NVRAM, 0);
+srcmess/machine/generic.c:		mame_file *nvram_file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_NVRAM, 1);
+srcmess/machine/generic.c:		file = mame_fopen(Machine->gamedrv->name, name, FILETYPE_MEMCARD, FALSE);
+srcmess/machine/generic.c:	file = mame_fopen(Machine->gamedrv->name, name, FILETYPE_MEMCARD, TRUE);
+srcmess/machine/generic.c:	file = mame_fopen(Machine->gamedrv->name, name, FILETYPE_MEMCARD, FALSE);
+srcmess/machine/generic.c:	file = mame_fopen(Machine->gamedrv->name, name, FILETYPE_MEMCARD, TRUE);
+srcmess/video.c:static mame_file *mame_fopen_next(int filetype)
+srcmess/video.c:    return (mame_fopen(Machine->gamedrv->name, name, filetype, 1));
+srcmess/video.c:	if ((fp = mame_fopen_next(FILETYPE_SCREENSHOT)) != NULL)
+srcmess/video.c:		movie_file = mame_fopen(Machine->gamedrv->name, name, FILETYPE_MOVIE, 1);
+srcmess/video.c:		movie_file = mame_fopen_next(FILETYPE_MOVIE);
+srcmess/debug/debugcmt.c: 		mame_file *fp = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_COMMENT, 1);
+srcmess/debug/debugcmt.c:	mame_file *fp = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_COMMENT, 0);
+srcmess/debug/mamedbg.c:			TRACE.file = fopen(name,"w");
+srcmess/debug/mamedbg.c:	file = fopen(filename, "w");
+srcmess/debug/mamedbg.c:	file = fopen(filename, "w");
+srcmess/debug/mamedbg.c:	file = fopen(filename, "wb");
+srcmess/debug/mamedbg.c:	file = fopen( filename, "r" );
+srcmess/debug/mamedbg.c:		file = fopen( filename, "r" );
+srcmess/debug/debugcpu.c:		debug_source_file = fopen(file, "r");
+srcmess/debug/debugcmd.c:	f = fopen(param[0], "wb");
+srcmess/debug/debugcmd.c:	f = fopen(param[0], "w");
+srcmess/debug/debugcmd.c:	f = fopen(param[0], "w");
+srcmess/debug/debugcmd.c:		f = fopen(filename, mode);
+srcmess/debug/debugcmd.c:		mame_file *fp = mame_fopen(Machine->gamedrv->name, param[0], FILETYPE_SCREENSHOT, 1);
+srcmess/debug/debugcmd.c:	file = fopen(filename, "w");
+srcmess/artwork.c:			artfile = mame_fopen((*driver)->name, filename, FILETYPE_ARTWORK, 0);
+srcmess/artwork.c:	file = mame_fopen(gamename, filename, FILETYPE_ARTWORK, 0);
+srcmess/unzip.c:	zip->fp = osd_fopen(pathtype, pathindex, zipfile, "rb", &error);
+srcmess/unzip.c:		zip->fp = osd_fopen(zip->pathtype, zip->pathindex, zip->zip, "rb", &error);
+srcmess/vidhrdw/stvvdp2.c:		fp=fopen("mamevdp1", "w+b");
+srcmess/vidhrdw/stvvdp2.c:		fp=fopen("vdp1_vram.bin", "r+b");
+srcmess/vidhrdw/stvvdp2.c:	fp=fopen("workraml.dmp", "w+b");
+srcmess/vidhrdw/stvvdp2.c:	fp=fopen("workramh.dmp", "w+b");
+srcmess/vidhrdw/stvvdp2.c:	fp=fopen("scu.dmp", "w+b");
+srcmess/vidhrdw/stvvdp2.c:	fp=fopen("stv_a0_vram.dmp", "w+b");
+srcmess/vidhrdw/stvvdp2.c:	fp=fopen("stv_a1_vram.dmp", "w+b");
+srcmess/vidhrdw/stvvdp2.c:	fp=fopen("stv_b0_vram.dmp", "w+b");
+srcmess/vidhrdw/stvvdp2.c:	fp=fopen("stv_b1_vram.dmp", "w+b");
+srcmess/vidhrdw/stvvdp2.c:	fp=fopen("cram.dmp", "w+b");
+srcmess/vidhrdw/stvvdp2.c:	fp=fopen("68k.dmp", "w+b");
+srcmess/vidhrdw/psx.c:		f = fopen( "dump.txt", "w" );
+srcmess/vidhrdw/psx.c:		f = fopen( "VRAM.BIN", "wb" );
+srcmess/vidhrdw/psx.c:		f = fopen( "VRAM.BIN", "rb" );
+srcmess/vidhrdw/n64.c:	rdp_exec = fopen("rdp_execute.txt", "wt");
+srcmess/vidhrdw/cps1.c:	fp=fopen("SCROLL1.DMP", "w+b");
+srcmess/vidhrdw/cps1.c:	fp=fopen("SCROLL2.DMP", "w+b");
+srcmess/vidhrdw/cps1.c:	fp=fopen("SCROLL3.DMP", "w+b");
+srcmess/vidhrdw/cps1.c:    fp=fopen("OBJ.DMP", "w+b");
+srcmess/vidhrdw/cps1.c:        fp=fopen("OBJCPS2.DMP", "w+b");
+srcmess/vidhrdw/cps1.c:        fp=fopen("CPS2OUTP.DMP", "w+b");
+srcmess/vidhrdw/cps1.c:	fp=fopen("OTHER.DMP", "w+b");
+srcmess/vidhrdw/cps1.c:	fp=fopen("PALETTE.DMP", "w+b");
+srcmess/vidhrdw/cps1.c:	fp=fopen("OUTPUT.DMP", "w+b");
+srcmess/vidhrdw/cps1.c:	fp=fopen("VIDEO.DMP", "w+b");
+srcmess/vidhrdw/stvvdp1.c://      fp=fopen("vdp1_ram.dmp", "w+b");
+srcmess/mame.c:	file = mame_fopen(Machine->gamedrv->name, saveload_pending_file, FILETYPE_STATE, 1);
+srcmess/mame.c:	file = mame_fopen(Machine->gamedrv->name, saveload_pending_file, FILETYPE_STATE, 0);
+srcmess/config.c:		file = mame_fopen(NULL, options.controller, FILETYPE_CTRLR, 0);
+srcmess/config.c:	file = mame_fopen("default", 0, FILETYPE_CONFIG, 0);
+srcmess/config.c:	file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_CONFIG, 0);
+srcmess/config.c:	file = mame_fopen("default", 0, FILETYPE_CONFIG, 1);
+srcmess/config.c:	file = mame_fopen(Machine->gamedrv->name, 0, FILETYPE_CONFIG, 1);
+srcmess/sound/ym2413.c:	sample[0]=fopen("sampsum.pcm","wb");
+srcmess/sound/ym2413.c:	cymfile = fopen("2413_.cym","wb");
+srcmess/sound/wavwrite.c:	wav->file = fopen(filename, "wb");
+srcmess/sound/fmopl.c:	sample[0]=fopen("sampsum.pcm","wb");
+srcmess/sound/fmopl.c:	cymfile = fopen("3812_.cym","wb");
+srcmess/sound/ym2151.c:	sample[8]=fopen("sampsum.pcm","wb");
+srcmess/sound/ym2151.c:	sample[0]=fopen("samp0.pcm","wb");
+srcmess/sound/ym2151.c:	sample[1]=fopen("samp1.pcm","wb");
+srcmess/sound/ym2151.c:	sample[2]=fopen("samp2.pcm","wb");
+srcmess/sound/ym2151.c:	sample[3]=fopen("samp3.pcm","wb");
+srcmess/sound/ym2151.c:	sample[4]=fopen("samp4.pcm","wb");
+srcmess/sound/ym2151.c:	sample[5]=fopen("samp5.pcm","wb");
+srcmess/sound/ym2151.c:	sample[6]=fopen("samp6.pcm","wb");
+srcmess/sound/ym2151.c:	sample[7]=fopen("samp7.pcm","wb");
+srcmess/sound/ym2151.c:	cymfile = fopen("2151_.cym","wb");
+srcmess/sound/samples.c:			f = mame_fopen(basename, samplenames[i+skipfirst], FILETYPE_SAMPLE, 0);
+srcmess/sound/samples.c:				f = mame_fopen(samplenames[0] + 1, samplenames[i+skipfirst], FILETYPE_SAMPLE, 0);
+srcmess/sound/qsound.c:	chip->fpRawDataR=fopen("qsoundr.raw", "w+b");
+srcmess/sound/qsound.c:	chip->fpRawDataL=fopen("qsoundl.raw", "w+b");
+srcmess/sound/fm.c:	sample[0]=fopen("sampsum.pcm","wb");
+srcmess/sound/discrete.c:		discrete_current_context->disclogfile = fopen(name, "w");
+srcmess/sound/discrete.c:		info->disc_csv_file[log_num] = fopen(name, "w");;
+srcmess/memory.c:		file = fopen("memdump.log", "w");
+srcmess/cheat.c:	theFile = mame_fopen(NULL, fileName, FILETYPE_CHEAT, 0);
+srcmess/cheat.c:	theFile = mame_fopen(NULL, mainDatabaseName, FILETYPE_CHEAT, 1);
+srcmess/fileio.c:static mame_file *generic_fopen(int pathtype, const char *gamename, const char *filename, const char *hash, UINT32 flags, osd_file_error *error);
+srcmess/fileio.c:    call mame_fopen before fileio_init
+srcmess/fileio.c:    mame_fopen_error - open a file for access and
+srcmess/fileio.c:mame_file *mame_fopen_error(const char *gamename, const char *filename, int filetype, int openforwrite, osd_file_error *error)
+srcmess/fileio.c:				logerror("mame_fopen: type %02x write not supported\n", filetype);
+srcmess/fileio.c:				logerror("mame_fopen: type %02x read not supported\n", filetype);
+srcmess/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, openforwrite ? FILEFLAG_OPENWRITE : FILEFLAG_OPENREAD, error);
+srcmess/fileio.c:			return generic_fopen(filetype, NULL, gamename, 0, openforwrite ? FILEFLAG_OPENWRITE : FILEFLAG_OPENREAD, error);
+srcmess/fileio.c:			return generic_fopen(filetype, gamename, filename, 0, openforwrite ? FILEFLAG_OPENWRITE : FILEFLAG_OPENREAD, error);
+srcmess/fileio.c:			return generic_fopen(filetype, gamename, filename, 0, FILEFLAG_OPENREAD | FILEFLAG_HASH, error);
+srcmess/fileio.c:			return generic_fopen(filetype, gamename, filename, 0, openforwrite ? FILEFLAG_OPENWRITE | FILEFLAG_CREATE_GAMEDIR : FILEFLAG_OPENREAD, error);
+srcmess/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, FILEFLAG_OPENREAD | (openforwrite ? FILEFLAG_OPENWRITE : 0), error);
+srcmess/fileio.c:			return generic_fopen(filetype, gamename, filename, 0, FILEFLAG_OPENREAD | FILEFLAG_NOZIP, error);
+srcmess/fileio.c:				return generic_fopen(filetype, gamename, filename, 0, flags, error);
+srcmess/fileio.c:			return generic_fopen(filetype, gamename, filename, 0, FILEFLAG_OPENREAD | FILEFLAG_OPENWRITE, error);
+srcmess/fileio.c:				return generic_fopen(filetype, gamename, filename, 0, openforwrite ? FILEFLAG_OPENWRITE | FILEFLAG_CREATE_GAMEDIR : FILEFLAG_OPENREAD, error);
+srcmess/fileio.c:			return generic_fopen(filetype, NULL, gamename, 0, openforwrite ? FILEFLAG_OPENWRITE : FILEFLAG_OPENREAD, error);
+srcmess/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, openforwrite ? FILEFLAG_OPENWRITE : FILEFLAG_OPENREAD, error);
+srcmess/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, FILEFLAG_ALLOW_ABSOLUTE | (openforwrite ? FILEFLAG_OPENWRITE : FILEFLAG_OPENREAD), error);
+srcmess/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, FILEFLAG_OPENWRITE, error);
+srcmess/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, FILEFLAG_ALLOW_ABSOLUTE | FILEFLAG_OPENWRITE, error);
+srcmess/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, FILEFLAG_OPENREAD, error);
+srcmess/fileio.c:			return generic_fopen(filetype, NULL, filename, 0, FILEFLAG_ALLOW_ABSOLUTE | FILEFLAG_OPENREAD, error);
+srcmess/fileio.c:			logerror("mame_fopen(): unknown filetype %02x\n", filetype);
+srcmess/fileio.c:    mame_fopen - open a file without returning
+srcmess/fileio.c:mame_file *mame_fopen(const char *gamename, const char *filename, int filetype, int openforwrite)
+srcmess/fileio.c:	return mame_fopen_error(gamename, filename, filetype, openforwrite, NULL);
+srcmess/fileio.c:    mame_fopen_rom - similar to mame_fopen, but
+srcmess/fileio.c:mame_file *mame_fopen_rom(const char *gamename, const char *filename, const char *exphash)
+srcmess/fileio.c:	return generic_fopen(FILETYPE_ROM, gamename, filename, exphash, FILEFLAG_OPENREAD | FILEFLAG_HASH, NULL);
+srcmess/fileio.c:	file = generic_fopen(FILETYPE_ROM, gamename, filename, hash, FILEFLAG_OPENREAD | FILEFLAG_HASH | FILEFLAG_VERIFY_ONLY, NULL);
+srcmess/fileio.c:    generic_fopen - master logic for finding and
+srcmess/fileio.c:static mame_file *generic_fopen(int pathtype, const char *gamename, const char *filename, const char* hash, UINT32 flags, osd_file_error *error)
+srcmess/fileio.c:	VPRINTF(("generic_fopen(%d, %s, %s, %s, %X)\n", pathcount, gamename, filename, extension, flags));
+srcmess/fileio.c:		fprintf(stderr, "Can't use HASH option with WRITE option in generic_fopen!\n");
+srcmess/fileio.c:				file.file = osd_fopen(pathtype, pathindex, name, access_modes[flags & 7], error);
+srcmess/fileio.c:					file.file = osd_fopen(pathtype, pathindex, name, "w+b", error);
+srcmess/fileio.c:							VPRINTF(("Using (mame_fopen) zip file for %s\n", filename));
+srcmess/fileio.c:						VPRINTF(("Using (mame_fopen) zip file for %s\n", filename));
+srcmess/fileio.c:	f = osd_fopen(pathtype, pathindex, file, "rb", &dummy);
+srcmess/fileio.c:			void *file = mame_fopen(drv->name, filename, FILETYPE_IMAGE, 0);
+srcmess/fileio.c:	return (chd_interface_file *)mame_fopen(NULL, filename, FILETYPE_IMAGE_DIFF, 1);
