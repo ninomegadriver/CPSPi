@@ -77,9 +77,9 @@ A Standard "Arduino" DC Motor | Some Screws (3x50mm)
 :-------------------------:|:-------------------------:  
 ![DC Motor](images/dc_motor.jpg)|![Some Screws](images/screws.jpg)  
   
-The parts are quite intuitive, so use your imagination :D 
+The parts are quite intuitive, so use your imagination.
   
-For gluing the parts together I personally like to use a mix of Super Glue and charcoal or graphite powder. This mixture is really strong and won't deform your parts, such as using hot clue or another method using PLA itself. Usually, I apply some power over the surface followed by some drops of Super Glue. If you print the parts in black PLA it will also give a reasonable nice finish.  
+For gluing the parts together I personally like to use a mix of super glue and charcoal or graphite powder. This mixture is really strong and won't deform your parts, such as using hot clue or another method using PLA itself. Usually, I apply some power over the surface followed by some drops of Super Glue. If you print the parts in black PLA it will also give a reasonable nice finish.  
   
 ![Card Dispenser Picture #1](images/card_dispenser_card_deposit.jpg)  
   
@@ -99,7 +99,7 @@ Put some cards in the compartment and ddjust the motor wheel hight so it touches
   
 ![Card Dispenser Picture #5](images/card_dispenser_card_adjust.jpg)  
   
-The adjustment of the whole system also depends on putting some weight on top of the cards pile so the bottom card will always get in play to be expelled.  
+The adjustment of the whole system also depends on putting some weight on top of the cards pile so the bottom card will always get in place to be expelled.  
   
 For that, use the "Weight Enclosure" printed part:  
 ![Card Dispenser Picture #6](images/card_dispenser_weight_housing.jpg)
